@@ -207,10 +207,10 @@
 
 <!-- HERO -->
 <div class="tos-hero">
-  <div class="tos-tag">Legal Document</div>
-  <h1>Client Agreement &amp;<br><em>Terms of Service</em></h1>
-  <div class="tos-meta">Puent3 LLC · Effective Date: 2026 · Version 1.0</div>
-  <div class="tos-draft-notice">⚠ Draft — Pending Legal Review</div>
+  <div class="tos-tag" id="tos-hero-tag">Legal Document</div>
+  <h1 id="tos-hero-h1">Client Agreement &amp;<br><em>Terms of Service</em></h1>
+  <div class="tos-meta" id="tos-hero-meta">Puent3 LLC · Effective Date: 2026 · Version 1.0</div>
+  <div class="tos-draft-notice" id="tos-hero-draft">⚠ Draft — Pending Legal Review</div>
   <div class="tos-divider"></div>
 </div>
 
@@ -360,11 +360,11 @@
         <li><strong>Severability:</strong> If any provision is found invalid or unenforceable, it will be modified to the minimum extent necessary, and the remaining provisions will remain in full force.</li>
         <li><strong>Waiver:</strong> Failure to enforce any provision of this Agreement shall not constitute a waiver of future enforcement rights.</li>
         <li><strong>Assignment:</strong> Client may not assign this Agreement without Puent3's prior written consent. Puent3 may assign this Agreement in connection with a merger, acquisition, or sale of substantially all of its assets.</li>
-        <li><strong>Notices:</strong> Notices to Puent3 must be sent to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="95f9f0f2f4f9d5e5e0f0fbe1a6bbfcfa">[email&#160;protected]</a>. Notices to Client will be sent to the email address on file.</li>
+        <li><strong>Notices:</strong> Notices to Puent3 must be sent to <a href="mailto:legal@puent3.io">legal@puent3.io</a>. Notices to Client will be sent to the email address on file.</li>
         <li><strong>Electronic Consent:</strong> By checking the consent checkbox during onboarding registration, Client affirms that they have read, understood, and agreed to be bound by this Agreement. This electronic consent is valid and enforceable under the Electronic Signatures in Global and National Commerce Act (E-SIGN Act).</li>
       </ul>
       <div class="tos-highlight">
-        <strong>Questions?</strong> Contact us at <a href="/cdn-cgi/l/email-protection#81ede4e6e0edc1f1f4e4eff5b2afe8ee" style="color: var(--pink-bright);"><span class="__cf_email__" data-cfemail="e28e8785838ea29297878c96d1cc8b8d">[email&#160;protected]</span></a>
+        <strong>Questions?</strong> Contact us at <a href="mailto:legal@puent3.io" style="color: var(--pink-bright);">legal@puent3.io</a>
       </div>
     </div>
 
@@ -513,11 +513,11 @@
         <li><strong>Divisibilidad:</strong> Si alguna disposición se considera inválida o inaplicable, será modificada en la medida mínima necesaria, y las disposiciones restantes permanecerán en plena vigencia.</li>
         <li><strong>Renuncia:</strong> El incumplimiento en hacer cumplir cualquier disposición de este Acuerdo no constituirá una renuncia a los derechos futuros de cumplimiento.</li>
         <li><strong>Cesión:</strong> El Cliente no puede ceder este Acuerdo sin el consentimiento previo por escrito de Puent3. Puent3 puede ceder este Acuerdo en relación con una fusión, adquisición o venta de sustancialmente todos sus activos.</li>
-        <li><strong>Notificaciones:</strong> Las notificaciones a Puent3 deben enviarse a <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cda1a8aaaca18dbdb8a8a3b9fee3a4a2">[email&#160;protected]</a>. Las notificaciones al Cliente se enviarán a la dirección de correo electrónico registrada.</li>
+        <li><strong>Notificaciones:</strong> Las notificaciones a Puent3 deben enviarse a <a href="mailto:legal@puent3.io">legal@puent3.io</a>. Las notificaciones al Cliente se enviarán a la dirección de correo electrónico registrada.</li>
         <li><strong>Consentimiento electrónico:</strong> Al marcar la casilla de consentimiento durante el registro de incorporación, el Cliente afirma que ha leído, comprendido y aceptado estar vinculado por este Acuerdo. Este consentimiento electrónico es válido y ejecutable bajo la Ley de Firmas Electrónicas en el Comercio Global y Nacional (Ley E-SIGN).</li>
       </ul>
       <div class="tos-highlight">
-        <strong>¿Preguntas?</strong> Contáctenos en <a href="/cdn-cgi/l/email-protection#761a1311171a36060313180245581f19" style="color: var(--pink-bright);"><span class="__cf_email__" data-cfemail="5e323b393f321e2e2b3b302a6d703731">[email&#160;protected]</span></a>
+        <strong>¿Preguntas?</strong> Contáctenos en <a href="mailto:legal@puent3.io" style="color: var(--pink-bright);">legal@puent3.io</a>
       </div>
     </div>
 
@@ -568,6 +568,23 @@ function setTosLang(lang) {
   var esBlock = document.getElementById('tos-es');
   if (enBlock) enBlock.style.display = lang === 'en' ? 'block' : 'none';
   if (esBlock) esBlock.style.display = lang === 'es' ? 'block' : 'none';
+
+  // Translate hero section
+  var heroTag = document.getElementById('tos-hero-tag');
+  var heroH1 = document.getElementById('tos-hero-h1');
+  var heroMeta = document.getElementById('tos-hero-meta');
+  var heroDraft = document.getElementById('tos-hero-draft');
+  if (lang === 'es') {
+    if (heroTag) heroTag.textContent = 'Documento Legal';
+    if (heroH1) heroH1.innerHTML = 'Acuerdo del Cliente &amp;<br><em>Términos de Servicio</em>';
+    if (heroMeta) heroMeta.textContent = 'Puent3 LLC · Fecha de Vigencia: 2026 · Versión 1.0';
+    if (heroDraft) heroDraft.textContent = '⚠ Borrador — Pendiente de Revisión Legal';
+  } else {
+    if (heroTag) heroTag.textContent = 'Legal Document';
+    if (heroH1) heroH1.innerHTML = 'Client Agreement &amp;<br><em>Terms of Service</em>';
+    if (heroMeta) heroMeta.textContent = 'Puent3 LLC · Effective Date: 2026 · Version 1.0';
+    if (heroDraft) heroDraft.textContent = '⚠ Draft — Pending Legal Review';
+  }
 }
 </script>
 </body>
