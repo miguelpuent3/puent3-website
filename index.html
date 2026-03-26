@@ -927,7 +927,7 @@ function toggleMenu() {
           <div class="wa-bubble wa-bubble-left" data-en="Got it! I'll quote you a rate in seconds." data-es="¡Entendido! Te cotizo en segundos.">Got it! I'll quote you a rate in seconds.</div>
         </div>
         <div class="wa-card-title" data-en="Message Us on WhatsApp" data-es="Escríbenos por WhatsApp">Message Us on WhatsApp</div>
-        <div class="wa-card-desc" data-en="Tell us who to pay, how much, and where. No forms. Just a message — in English or Spanish." data-es="Dinos a quién pagar, cuánto y a dónde. Sin formularios. Solo un mensaje, en inglés o español.">Tell us who to pay, how much, and where. No forms. Just a message — in English or Spanish.</div>
+        <div class="wa-card-desc" data-en="Tell us who to pay, how much, and in which currency. Message us in English or Spanish — we'll take it from there." data-es="Dinos a quién pagar, cuánto y en qué moneda. Escríbenos en inglés o español — nosotros nos encargamos del resto.">Tell us who to pay, how much, and in which currency. Message us in English or Spanish — we'll take it from there.</div>
       </div>
 
       <!-- ARROW -->
@@ -977,11 +977,11 @@ function toggleMenu() {
               <span data-en="Payment Delivered" data-es="Pago Entregado">Payment Delivered</span>
             </div>
             <div class="wa-confirm-amount">$34,240,000 COP → $8,000 USD</div>
-            <div class="wa-confirm-ref">Ref P3-9421 · on-chain ✓</div>
+            <div class="wa-confirm-ref">TX: P3-2026-9421 · on-chain ✓</div>
           </div>
         </div>
         <div class="wa-card-title" data-en="Recipient Gets Paid" data-es="El beneficiario cobra">Recipient Gets Paid</div>
-        <div class="wa-card-desc" data-en="USD lands in their US bank in minutes. You get a WhatsApp confirmation with on-chain proof." data-es="Los dólares llegan a su banco en minutos. Tú recibes confirmación en WhatsApp con prueba en cadena.">USD lands in their US bank in minutes. You get a WhatsApp confirmation with on-chain proof.</div>
+        <div class="wa-card-desc" data-en="Funds arrive in the recipient's local currency in minutes. You get a WhatsApp confirmation with your transaction ID and on-chain proof." data-es="Los fondos llegan en la moneda local del beneficiario en minutos. Recibes confirmación en WhatsApp con tu ID de transacción y prueba en cadena.">Funds arrive in the recipient's local currency in minutes. You get a WhatsApp confirmation with your transaction ID and on-chain proof.</div>
       </div>
 
     </div><!-- /wa-steps-row -->
@@ -1236,27 +1236,74 @@ function toggleMenu() {
         </div>
       </div>
       <div>
-        <div class="portal-card">
-          <div class="portal-card-header">
-            <div class="portal-card-title" data-en="Transaction Dashboard" data-es="Panel de Transacciones">Transaction Dashboard</div>
-            <div class="portal-live"><div class="portal-live-dot"></div><span data-en="Live" data-es="En Vivo">Live</span></div>
-          </div>
-          <div class="portal-wallet-bar">
-            <div><div class="wallet-label" data-en="Your Wallet Balance" data-es="Saldo de tu Billetera">Your Wallet Balance</div><div class="wallet-amount">12,450.00 USDC</div></div>
-            <div class="wallet-badge" data-en="Dedicated" data-es="Dedicada">Dedicated</div>
-          </div>
-          <div class="portal-tx-list">
-            <div class="portal-tx">
-              <div class="portal-tx-left"><div class="tx-dot dot-green"></div><div><div class="tx-name">Proveedor Bogotá S.A.</div><div class="tx-meta" data-en="Today, 9:41 AM" data-es="Hoy, 9:41 AM">Today, 9:41 AM</div></div></div>
-              <div><div class="tx-amount">$8,000</div><div class="tx-status" data-en="Delivered" data-es="Entregado">Delivered</div></div>
+        <div class="portal-card" style="padding: 0; overflow: hidden;">
+          <!-- Portal header bar -->
+          <div style="background: rgba(255,149,219,0.06); border-bottom: 1px solid var(--border-glass); padding: 14px 20px; display: flex; align-items: center; justify-content: space-between;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <div style="width: 8px; height: 8px; border-radius: 50%; background: #4ade80; box-shadow: 0 0 6px rgba(74,222,128,0.5);"></div>
+              <span style="font-family: 'Syne', sans-serif; font-weight: 700; font-size: 13px; color: var(--white);" data-en="Puent3 Client Portal" data-es="Portal de Cliente Puent3">Puent3 Client Portal</span>
             </div>
-            <div class="portal-tx">
-              <div class="portal-tx-left"><div class="tx-dot dot-yellow"></div><div><div class="tx-name">Tech Solutions MX</div><div class="tx-meta" data-en="Today, 11:15 AM" data-es="Hoy, 11:15 AM">Today, 11:15 AM</div></div></div>
-              <div><div class="tx-amount">$3,500</div><div class="tx-status" data-en="Processing" data-es="Procesando">Processing</div></div>
+            <div style="display: flex; align-items: center; gap: 6px; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--pink-bright);">
+              <div class="portal-live-dot"></div><span data-en="Live" data-es="En Vivo">Live</span>
             </div>
-            <div class="portal-tx">
-              <div class="portal-tx-left"><div class="tx-dot dot-pink"></div><div><div class="tx-name">Contratista Lima</div><div class="tx-meta" data-en="Scheduled · Mar 20" data-es="Programado · 20 Mar">Scheduled · Mar 20</div></div></div>
-              <div><div class="tx-amount">$5,200</div><div class="tx-status" data-en="Scheduled" data-es="Programado">Scheduled</div></div>
+          </div>
+          <!-- Nav tabs -->
+          <div style="display: flex; gap: 0; border-bottom: 1px solid var(--border-glass); padding: 0 16px;">
+            <div style="padding: 10px 14px; font-size: 11px; font-weight: 600; color: var(--pink-bright); border-bottom: 2px solid var(--pink); cursor: pointer;" data-en="Dashboard" data-es="Panel">Dashboard</div>
+            <div style="padding: 10px 14px; font-size: 11px; font-weight: 600; color: var(--white-muted); cursor: pointer;" data-en="Payments" data-es="Pagos">Payments</div>
+            <div style="padding: 10px 14px; font-size: 11px; font-weight: 600; color: var(--white-muted); cursor: pointer;" data-en="Recipients" data-es="Beneficiarios">Recipients</div>
+            <div style="padding: 10px 14px; font-size: 11px; font-weight: 600; color: var(--white-muted); cursor: pointer;" data-en="Profile" data-es="Perfil">Profile</div>
+          </div>
+          <div style="padding: 16px 18px; display: flex; flex-direction: column; gap: 12px;">
+            <!-- Wallet + KYB status row -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+              <div class="portal-wallet-bar" style="margin: 0; flex-direction: column; gap: 4px; padding: 12px 14px;">
+                <div class="wallet-label" data-en="Wallet Balance" data-es="Saldo">Wallet Balance</div>
+                <div class="wallet-amount" style="font-size: 16px;">12,450.00 USDC</div>
+              </div>
+              <div style="background: rgba(74,222,128,0.07); border: 1px solid rgba(74,222,128,0.2); border-radius: 12px; padding: 12px 14px; display: flex; flex-direction: column; gap: 4px;">
+                <div style="font-size: 10px; color: var(--white-muted); font-weight: 500;" data-en="KYB Status" data-es="Estado KYB">KYB Status</div>
+                <div style="font-size: 13px; font-weight: 700; color: #4ade80; display: flex; align-items: center; gap: 6px;">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="#4ade80"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  <span data-en="Verified" data-es="Verificado">Verified</span>
+                </div>
+              </div>
+            </div>
+            <!-- Saved recipients -->
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-glass); border-radius: 10px; padding: 10px 12px;">
+              <div style="font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--pink); opacity: 0.7; margin-bottom: 8px;" data-en="Saved Recipients" data-es="Beneficiarios Guardados">Saved Recipients</div>
+              <div style="display: flex; flex-direction: column; gap: 6px;">
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                  <div style="display: flex; align-items: center; gap: 8px;">
+                    <div style="width: 24px; height: 24px; border-radius: 50%; background: rgba(255,149,219,0.15); display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 700; color: var(--pink);">PS</div>
+                    <div><div style="font-size: 11px; font-weight: 500; color: var(--white);">Proveedor Sur S.A.</div><div style="font-size: 9px; color: var(--white-muted);">MXN · Banco Santander</div></div>
+                  </div>
+                  <div style="font-size: 9px; color: var(--pink-bright); font-weight: 600; cursor: pointer;" data-en="Pay" data-es="Pagar">Pay →</div>
+                </div>
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                  <div style="display: flex; align-items: center; gap: 8px;">
+                    <div style="width: 24px; height: 24px; border-radius: 50%; background: rgba(255,149,219,0.15); display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 700; color: var(--pink);">TM</div>
+                    <div><div style="font-size: 11px; font-weight: 500; color: var(--white);">Tech Miami LLC</div><div style="font-size: 9px; color: var(--white-muted);">USD · Bank of America</div></div>
+                  </div>
+                  <div style="font-size: 9px; color: var(--pink-bright); font-weight: 600; cursor: pointer;" data-en="Pay" data-es="Pagar">Pay →</div>
+                </div>
+              </div>
+            </div>
+            <!-- Recent transactions -->
+            <div class="portal-tx-list" style="gap: 6px;">
+              <div style="font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--pink); opacity: 0.7; margin-bottom: 2px;" data-en="Recent Transactions" data-es="Transacciones Recientes">Recent Transactions</div>
+              <div class="portal-tx" style="padding: 10px 12px;">
+                <div class="portal-tx-left"><div class="tx-dot dot-green"></div><div><div class="tx-name" style="font-size: 12px;">Proveedor Bogotá S.A.</div><div class="tx-meta" style="font-size: 10px;">TX: P3-2026-9421 · <span data-en="Today" data-es="Hoy">Today</span></div></div></div>
+                <div><div class="tx-amount" style="font-size: 13px;">$8,000</div><div class="tx-status" data-en="Delivered" data-es="Entregado">Delivered</div></div>
+              </div>
+              <div class="portal-tx" style="padding: 10px 12px;">
+                <div class="portal-tx-left"><div class="tx-dot dot-yellow"></div><div><div class="tx-name" style="font-size: 12px;">Tech Solutions MX</div><div class="tx-meta" style="font-size: 10px;">TX: P3-2026-9398 · <span data-en="Yesterday" data-es="Ayer">Yesterday</span></div></div></div>
+                <div><div class="tx-amount" style="font-size: 13px;">$3,500</div><div class="tx-status" data-en="Processing" data-es="Procesando">Processing</div></div>
+              </div>
+              <div class="portal-tx" style="padding: 10px 12px;">
+                <div class="portal-tx-left"><div class="tx-dot dot-pink"></div><div><div class="tx-name" style="font-size: 12px;">Contratista Lima</div><div class="tx-meta" style="font-size: 10px; color: var(--pink);" data-en="Scheduled · Mar 28" data-es="Programado · 28 Mar">Scheduled · Mar 28</div></div></div>
+                <div><div class="tx-amount" style="font-size: 13px;">$5,200</div><div class="tx-status" data-en="Scheduled" data-es="Programado">Scheduled</div></div>
+              </div>
             </div>
           </div>
         </div>
@@ -1357,11 +1404,11 @@ function toggleMenu() {
         </div>
         <div class="edu-term">
           <div class="edu-term-word">On-Ramp</div>
-          <div class="edu-term-def" data-en="The process of converting traditional fiat currency (USD, COP, MXN, etc.) into digital currency such as USDC. On-ramps are typically provided by regulated exchanges. This is the first step to using Puent3: converting your dollars into USDC so they can move at the speed of the blockchain." data-es="El proceso de convertir moneda fiat tradicional (USD, COP, MXN, etc.) en moneda digital como USDC. Los on-ramps son típicamente provistos por exchanges regulados. Este es el primer paso para usar Puent3: convertir tus dólares en USDC para que puedan moverse a la velocidad del blockchain.">The process of converting traditional fiat currency (USD, COP, MXN, etc.) into digital currency such as USDC. On-ramps are typically provided by regulated exchanges. This is the first step to using Puent3: converting your dollars into USDC so they can move at the speed of the blockchain.</div>
+          <div class="edu-term-def" data-en="The process of converting traditional fiat currency into a digital currency such as USDC. On-ramps are typically provided by regulated exchanges or financial institutions and allow clients to fund their USDC wallet before sending payments through Puent3." data-es="El proceso de convertir moneda fiat tradicional en una moneda digital como USDC. Los on-ramps son típicamente provistos por exchanges regulados o instituciones financieras y permiten a los clientes fondear su billetera USDC antes de enviar pagos a través de Puent3.">The process of converting traditional fiat currency into a digital currency such as USDC. On-ramps are typically provided by regulated exchanges or financial institutions and allow clients to fund their USDC wallet before sending payments through Puent3.</div>
         </div>
         <div class="edu-term">
           <div class="edu-term-word">Off-Ramp</div>
-          <div class="edu-term-def" data-en="The reverse of an on-ramp: converting USDC back into local fiat currency and delivering it to a recipient bank account. Puent3 handles the off-ramp for your recipients automatically. They receive local currency in their bank account without needing to understand or interact with crypto." data-es="Lo contrario de un on-ramp: convertir USDC de vuelta a moneda local y depositarla en la cuenta bancaria del beneficiario. Puent3 maneja el off-ramp para tus beneficiarios automáticamente. Ellos reciben moneda local en su cuenta bancaria sin necesidad de entender o interactuar con criptomonedas.">The reverse of an on-ramp: converting USDC back into local fiat currency and delivering it to a recipient bank account. Puent3 handles the off-ramp for your recipients automatically. They receive local currency in their bank account without needing to understand or interact with crypto.</div>
+          <div class="edu-term-def" data-en="The process of converting USDC back into local fiat currency and delivering it to a recipient's bank account. Off-ramps are handled by regulated financial partners and enable recipients to receive local currency without needing to hold or manage digital assets themselves." data-es="El proceso de convertir USDC de vuelta a moneda local y depositarla en la cuenta bancaria del beneficiario. Los off-ramps son manejados por socios financieros regulados y permiten a los beneficiarios recibir moneda local sin necesidad de tener o gestionar activos digitales por su cuenta.">The process of converting USDC back into local fiat currency and delivering it to a recipient's bank account. Off-ramps are handled by regulated financial partners and enable recipients to receive local currency without needing to hold or manage digital assets themselves.</div>
         </div>
         <div class="edu-term">
           <div class="edu-term-word">KYC / AML</div>
@@ -1372,8 +1419,8 @@ function toggleMenu() {
           <div class="edu-term-def" data-en="Settlement is the moment a payment is finalized and funds are confirmed as delivered. Traditional wire transfers settle in 1 to 5 business days. USDC transactions on blockchain settle in seconds to minutes, with full cryptographic confirmation. There is no waiting, no uncertainty, and no reversal once confirmed." data-es="La liquidación es el momento en que un pago se finaliza y los fondos se confirman como entregados. Las transferencias bancarias tradicionales liquidan en 1 a 5 días hábiles. Las transacciones USDC en blockchain liquidan en segundos a minutos, con confirmación criptográfica completa. No hay espera, no hay incertidumbre y no hay reversión una vez confirmado.">Settlement is the moment a payment is finalized and funds are confirmed as delivered. Traditional wire transfers settle in 1 to 5 business days. USDC transactions on blockchain settle in seconds to minutes, with full cryptographic confirmation. There is no waiting, no uncertainty, and no reversal once confirmed.</div>
         </div>
         <div class="edu-term">
-          <div class="edu-term-word">Bitcoin</div>
-          <div class="edu-term-def" data-en="The first blockchain, launched in 2009 by the pseudonymous Satoshi Nakamoto. Bitcoin proved that two parties could transfer value anywhere in the world without a bank or intermediary. It gave birth to an entirely new financial infrastructure — one built on code, not institutions. Every blockchain and stablecoin that exists today, including the rails Puent3 runs on, traces its origins back to Bitcoin." data-es="La primera blockchain, lanzada en 2009 por el seudónimo Satoshi Nakamoto. Bitcoin demostró que dos partes podían transferir valor en cualquier parte del mundo sin un banco ni intermediario. Dio origen a una infraestructura financiera completamente nueva, construida sobre código, no sobre instituciones. Cada blockchain y stablecoin que existe hoy, incluidos los rieles sobre los que opera Puent3, tiene sus orígenes en Bitcoin.">The first blockchain, launched in 2009 by the pseudonymous Satoshi Nakamoto. Bitcoin proved that two parties could transfer value anywhere in the world without a bank or intermediary. It gave birth to an entirely new financial infrastructure — one built on code, not institutions. Every blockchain and stablecoin that exists today, including the rails Puent3 runs on, traces its origins back to Bitcoin.</div>
+          <div class="edu-term-word">Ethereum</div>
+          <div class="edu-term-def" data-en="The second-largest blockchain by adoption, launched in 2015. Ethereum introduced smart contracts — self-executing code that runs on the blockchain without any intermediary. This innovation made it possible to build financial applications, stablecoins, and payment protocols directly on a public blockchain. USDC runs natively on Ethereum, making it one of the foundational networks for modern digital payments." data-es="La segunda blockchain por adopción, lanzada en 2015. Ethereum introdujo los contratos inteligentes: código autoejectable que funciona en la blockchain sin ningún intermediario. Esta innovación hizo posible construir aplicaciones financieras, stablecoins y protocolos de pago directamente en una blockchain pública. USDC funciona nativamente en Ethereum, convirtiéndola en una de las redes fundamentales para los pagos digitales modernos.">The second-largest blockchain by adoption, launched in 2015. Ethereum introduced smart contracts — self-executing code that runs on the blockchain without any intermediary. This innovation made it possible to build financial applications, stablecoins, and payment protocols directly on a public blockchain. USDC runs natively on Ethereum, making it one of the foundational networks for modern digital payments.</div>
         </div>
         <div class="edu-term">
           <div class="edu-term-word">Solana</div>
@@ -1409,7 +1456,7 @@ function toggleMenu() {
       
       <div class="faq-item">
         <h3 data-en="What are your fees?" data-es="¿Cuáles son sus tarifas?">What are your fees?</h3>
-        <p data-en="Our fees are transparent and competitive, starting at 0.8% for transactions over $10,000. Smaller amounts have slightly higher percentages. Contact us for volume discounts." data-es="Nuestras tarifas son transparentes y competitivas, comenzando en 0.8% para transacciones de más de $10,000. Montos menores tienen porcentajes ligeramente más altos. Contáctenos para descuentos por volumen.">Our fees are transparent and competitive, starting at 0.8% for transactions over $10,000. Smaller amounts have slightly higher percentages. Contact us for volume discounts.</p>
+        <p data-en="Our fees are transparent and disclosed upfront before every transaction is confirmed. The rate you see is the rate you pay — no hidden charges. Contact us to discuss your volume and use case." data-es="Nuestras tarifas son transparentes y se divulgan antes de confirmar cada transacción. La tarifa que ves es la que pagas, sin cargos ocultos. Contáctenos para hablar sobre tu volumen y caso de uso.">Our fees are transparent and disclosed upfront before every transaction is confirmed. The rate you see is the rate you pay — no hidden charges. Contact us to discuss your volume and use case.</p>
       </div>
       
       <div class="faq-item">
@@ -1424,12 +1471,12 @@ function toggleMenu() {
       
       <div class="faq-item">
         <h3 data-en="How do I get started?" data-es="¿Cómo empiezo?">How do I get started?</h3>
-        <p data-en="Click 'Register' to complete our quick registration form. After identity verification (usually within 1 business day), you can send payments via WhatsApp or our client portal." data-es="Haga clic en 'Registrarse' para completar nuestro formulario de registro rápido. Después de la verificación de identidad (generalmente dentro de 1 día hábil), puede enviar pagos por WhatsApp o nuestro portal de clientes.">Click 'Register' to complete our quick registration form. After identity verification (usually within 1 business day), you can send payments via WhatsApp or our client portal.</p>
+        <p data-en="Start by completing the registration form at the link above. You will then need to submit a set of required business and identity documents for our compliance review. Once your application is reviewed and approved, our team will contact you to complete onboarding. Please allow time for the verification process — we are committed to thorough compliance." data-es="Comienza completando el formulario de registro en el enlace de arriba. Luego deberás enviar un conjunto de documentos empresariales y de identidad requeridos para nuestra revisión de cumplimiento. Una vez revisada y aprobada tu solicitud, nuestro equipo se comunicará contigo para completar el proceso. Por favor, ten en cuenta que la verificación toma tiempo — estamos comprometidos con un cumplimiento riguroso.">Start by completing the registration form at the link above. You will then need to submit a set of required business and identity documents for our compliance review. Once your application is reviewed and approved, our team will contact you to complete onboarding. Please allow time for the verification process — we are committed to thorough compliance.</p>
       </div>
       
       <div class="faq-item">
         <h3 data-en="Which countries do you support?" data-es="¿Qué países apoyan?">Which countries do you support?</h3>
-        <p data-en="We currently focus on Colombia, Canada, and Latin America for cross-border payments. Our network is expanding. Contact us to check if we support your specific route." data-es="Actualmente nos enfocamos en Colombia, Canadá y América Latina para pagos transfronterizos. Nuestra red se está expandiendo. Contáctenos para verificar si admitimos su ruta específica.">We currently focus on Colombia, Canada, and Latin America for cross-border payments. Our network is expanding. Contact us to check if we support your specific route.</p>
+        <p data-en="We currently support payment corridors connecting Latin America, the United States, and Canada. Our network is actively expanding. Contact us to confirm whether your specific origin and destination countries are supported." data-es="Actualmente apoyamos corredores de pago que conectan América Latina, Estados Unidos y Canadá. Nuestra red se está expandiendo activamente. Contáctenos para confirmar si sus países de origen y destino específicos están disponibles.">We currently support payment corridors connecting Latin America, the United States, and Canada. Our network is actively expanding. Contact us to confirm whether your specific origin and destination countries are supported.</p>
       </div>
     </div>
   </div>
@@ -1473,7 +1520,6 @@ function toggleMenu() {
       <li><a href="#portal" data-en="Platform" data-es="Plataforma">Platform</a></li>
       <li><a href="#why" data-en="Why Puent3" data-es="Por Qué Puent3">Why Puent3</a></li>
       <li><a href="#compliance" data-en="Compliance" data-es="Cumplimiento">Compliance</a></li>
-      <li><a href="/terms" data-en="Terms of Service" data-es="Términos de Servicio">Terms of Service</a></li>
     </ul>
   </div>
   <div class="footer-col">
@@ -1484,12 +1530,18 @@ function toggleMenu() {
     </ul>
   </div>
 </div>
+<div style="border-top: 1px solid var(--border); padding: 20px 60px; max-width: 1240px; margin: 0 auto; display: flex; justify-content: center; gap: 32px; flex-wrap: wrap;">
+  <a href="/terms" style="font-size: 12px; color: rgba(255,149,219,0.55); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--pink-bright)'" onmouseout="this.style.color='rgba(255,149,219,0.55)'" data-en="Terms of Service" data-es="Términos de Servicio">Terms of Service</a>
+  <a href="/privacy" style="font-size: 12px; color: rgba(255,149,219,0.55); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--pink-bright)'" onmouseout="this.style.color='rgba(255,149,219,0.55)'" data-en="Privacy Policy" data-es="Política de Privacidad">Privacy Policy</a>
+  <a href="/disclosure" style="font-size: 12px; color: rgba(255,149,219,0.55); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--pink-bright)'" onmouseout="this.style.color='rgba(255,149,219,0.55)'" data-en="Electronic Disclosure" data-es="Divulgación Electrónica">Electronic Disclosure</a>
+  <a href="/glba" style="font-size: 12px; color: rgba(255,149,219,0.55); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--pink-bright)'" onmouseout="this.style.color='rgba(255,149,219,0.55)'" data-en="GLBA Privacy Notice" data-es="Aviso de Privacidad GLBA">GLBA Privacy Notice</a>
+</div>
 <div class="footer-bottom">
   <p data-en="© 2026 Puent3 LLC. All rights reserved." data-es="© 2026 Puent3 LLC. Todos los derechos reservados.">© 2026 Puent3 LLC. All rights reserved.</p>
   <p><a href="mailto:info@puent3.io">info@puent3.io</a></p>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // toggleMenu defined in head
 
 // Mobile nav links — close menu then scroll
@@ -1698,13 +1750,4 @@ function submitForm(e) {
     // Force height if not set
     if (!canvas.height || canvas.height < 10) {
       var isMobile = window.innerWidth < 960;
-      canvas.style.height = (isMobile ? "200" : "280") + "px";
-    }
-    var dpr = window.devicePixelRatio || 1;
-    var cssW = canvas.parentElement ? canvas.parentElement.clientWidth : 300;
-    var cssH = window.innerWidth < 960 ? 200 : 280;
-    canvas.style.width = cssW + "px";
-    canvas.style.height = cssH + "px";
-    canvas.width = Math.round(cssW * dpr);
-    canvas.height = Math.round(cssH * dpr);
-    c
+      canvas.style.height = (isMobile ? "200" : "280")
