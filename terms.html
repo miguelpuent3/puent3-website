@@ -581,4 +581,16 @@ function setTosLang(lang) {
   var heroDraft = document.getElementById('tos-hero-draft');
   if (lang === 'es') {
     if (heroTag) heroTag.textContent = 'Documento Legal';
-    if (heroH1) heroH1.innerHTML = '
+    if (heroH1) heroH1.innerHTML = 'Acuerdo de Cliente &amp;<br><em>T&eacute;rminos de Servicio</em>';
+    if (heroMeta) heroMeta.textContent = 'Puent3 LLC · Fecha de Vigencia: 2026 · Versión 1.0';
+    if (heroDraft) heroDraft.textContent = '⚠ Borrador — Pendiente de Revisión Legal';
+  } else {
+    if (heroTag) heroTag.textContent = 'Legal Document';
+    if (heroH1) heroH1.innerHTML = 'Client Agreement &amp;<br><em>Terms of Service</em>';
+    if (heroMeta) heroMeta.textContent = 'Puent3 LLC · Effective Date: 2026 · Version 1.0';
+    if (heroDraft) heroDraft.textContent = '⚠ Draft — Pending Legal Review';
+  }
+}
+</script>
+</body>
+</html>
