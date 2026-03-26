@@ -360,7 +360,7 @@
         <li><strong>Severability:</strong> If any provision is found invalid or unenforceable, it will be modified to the minimum extent necessary, and the remaining provisions will remain in full force.</li>
         <li><strong>Waiver:</strong> Failure to enforce any provision of this Agreement shall not constitute a waiver of future enforcement rights.</li>
         <li><strong>Assignment:</strong> Client may not assign this Agreement without Puent3's prior written consent. Puent3 may assign this Agreement in connection with a merger, acquisition, or sale of substantially all of its assets.</li>
-        <li><strong>Notices:</strong> Notices to Puent3 must be sent to <a href="mailto:legal@puent3.io">legal@puent3.io</a>. Notices to Client will be sent to the email address on file.</li>
+        <li><strong>Notices:</strong> Notices to Puent3 must be sent to <a href="mailto:legal@puent3.io" style="color: var(--pink-bright);">legal@puent3.io</a>. Notices to Client will be sent to the email address on file.</li>
         <li><strong>Electronic Consent:</strong> By checking the consent checkbox during onboarding registration, Client affirms that they have read, understood, and agreed to be bound by this Agreement. This electronic consent is valid and enforceable under the Electronic Signatures in Global and National Commerce Act (E-SIGN Act).</li>
       </ul>
       <div class="tos-highlight">
@@ -513,7 +513,7 @@
         <li><strong>Divisibilidad:</strong> Si alguna disposición se considera inválida o inaplicable, será modificada en la medida mínima necesaria, y las disposiciones restantes permanecerán en plena vigencia.</li>
         <li><strong>Renuncia:</strong> El incumplimiento en hacer cumplir cualquier disposición de este Acuerdo no constituirá una renuncia a los derechos futuros de cumplimiento.</li>
         <li><strong>Cesión:</strong> El Cliente no puede ceder este Acuerdo sin el consentimiento previo por escrito de Puent3. Puent3 puede ceder este Acuerdo en relación con una fusión, adquisición o venta de sustancialmente todos sus activos.</li>
-        <li><strong>Notificaciones:</strong> Las notificaciones a Puent3 deben enviarse a <a href="mailto:legal@puent3.io">legal@puent3.io</a>. Las notificaciones al Cliente se enviarán a la dirección de correo electrónico registrada.</li>
+        <li><strong>Notificaciones:</strong> Las notificaciones a Puent3 deben enviarse a <a href="mailto:legal@puent3.io" style="color: var(--pink-bright);">legal@puent3.io</a>. Las notificaciones al Cliente se enviarán a la dirección de correo electrónico registrada.</li>
         <li><strong>Consentimiento electrónico:</strong> Al marcar la casilla de consentimiento durante el registro de incorporación, el Cliente afirma que ha leído, comprendido y aceptado estar vinculado por este Acuerdo. Este consentimiento electrónico es válido y ejecutable bajo la Ley de Firmas Electrónicas en el Comercio Global y Nacional (Ley E-SIGN).</li>
       </ul>
       <div class="tos-highlight">
@@ -527,9 +527,14 @@
 
 <div class="tos-footer">
   <p>© 2026 Puent3 LLC · All rights reserved · <a href="/">puent3.io</a></p>
-  <p style="margin-top:8px; font-size:12px; color: rgba(245,240,255,0.35);">This document is a draft pending legal review. It does not constitute legal a
-
-<script>
+  <div style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-top: 16px;">
+    <a href="/terms" style="font-size: 12px; color: var(--pink-bright); text-decoration: none; border-bottom: 1px solid var(--pink);">Terms of Service</a>
+    <a href="/privacy" style="font-size: 12px; color: rgba(255,149,219,0.55); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--pink-bright)'" onmouseout="this.style.color='rgba(255,149,219,0.55)'">Privacy Policy</a>
+    <a href="/disclosure" style="font-size: 12px; color: rgba(255,149,219,0.55); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--pink-bright)'" onmouseout="this.style.color='rgba(255,149,219,0.55)'">Electronic Disclosure</a>
+    <a href="/glba" style="font-size: 12px; color: rgba(255,149,219,0.55); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--pink-bright)'" onmouseout="this.style.color='rgba(255,149,219,0.55)'">GLBA Privacy Notice</a>
+  </div>
+  <p style="margin-top:16px; font-size:12px; color: rgba(245,240,255,0.35);">This document is a draft pending legal review. It does not constitute legal advice.</p>
+</div>
 // Nav glassmorphism on scroll — matches main site behavior
 (function() {
   var lastScrollY = 0;
@@ -576,16 +581,4 @@ function setTosLang(lang) {
   var heroDraft = document.getElementById('tos-hero-draft');
   if (lang === 'es') {
     if (heroTag) heroTag.textContent = 'Documento Legal';
-    if (heroH1) heroH1.innerHTML = 'Acuerdo del Cliente &amp;<br><em>Términos de Servicio</em>';
-    if (heroMeta) heroMeta.textContent = 'Puent3 LLC · Fecha de Vigencia: 2026 · Versión 1.0';
-    if (heroDraft) heroDraft.textContent = '⚠ Borrador — Pendiente de Revisión Legal';
-  } else {
-    if (heroTag) heroTag.textContent = 'Legal Document';
-    if (heroH1) heroH1.innerHTML = 'Client Agreement &amp;<br><em>Terms of Service</em>';
-    if (heroMeta) heroMeta.textContent = 'Puent3 LLC · Effective Date: 2026 · Version 1.0';
-    if (heroDraft) heroDraft.textContent = '⚠ Draft — Pending Legal Review';
-  }
-}
-</script>
-</body>
-</html>
+    if (heroH1) heroH1.innerHTML = '
