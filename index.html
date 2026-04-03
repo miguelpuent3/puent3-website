@@ -788,11 +788,11 @@
   }
   .splash-tagline {
     font-family: "DM Sans", sans-serif;
-    font-size: 14px; font-weight: 300;
-    letter-spacing: 0.12em; text-transform: uppercase;
-    color: rgba(255,149,219,0.65);
+    font-size: 13px; font-weight: 300;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: rgba(255,149,219,0.6);
     opacity: 0;
-    animation: splash-fade-in 0.8s ease forwards 1.1s;
+    animation: splash-fade-in 0.8s ease forwards 1.2s;
     margin-top: 0;
   }
   @keyframes splash-spin    { to { transform: rotate(360deg); } }
@@ -991,19 +991,12 @@ window.addEventListener('resize', function() {
   }
 });
 
-// ── Language auto-detection (runs before anything renders) ──────────────────
+// ── Language auto-detection
 (function() {
   var saved = localStorage.getItem('puent3_lang');
-  if (saved) {
-    setLang(saved);
-    return;
-  }
+  if (saved) { setLang(saved); return; }
   var browser = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
-  if (browser.startsWith('es')) {
-    setLang('es');
-  } else {
-    setLang('en');
-  }
+  if (browser.startsWith('es')) { setLang('es'); } else { setLang('en'); }
 })();
 
 // ── Intro splash screen (runs after DOM is ready)
@@ -1414,7 +1407,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="wa-bubble wa-bubble-left" data-en="Got it! I'll quote you a rate in seconds." data-es="¡Entendido! Te cotizo en segundos.">Got it! I'll quote you a rate in seconds.</div>
         </div>
         <div class="wa-card-title" data-en="Message Us on WhatsApp" data-es="Escríbenos por WhatsApp">Message Us on WhatsApp</div>
-        <div class="wa-card-desc" data-en="Tell us who to pay, how much, and in which currency. Message us in English or Spanish and we'll take it from there." data-es="Dinos a quién pagar, cuánto y en qué moneda. Escríbenos en inglés o español y nosotros nos encargamos del resto.">Tell us who to pay, how much, and in which currency. Message us in English or Spanish and we'll take it from there.</div>
+        <div class="wa-card-desc" data-en="Tell us who to pay, how much, and in which currency. Message us in English or Spanish and we'll take it from there." data-es="Dinos a quién pagar, cuánto y en qué moneda. Escríbenos en inglés o español y nosotros hacemos el resto.">Tell us who to pay, how much, and in which currency. Message us in English or Spanish and we'll take it from there.</div>
       </div>
 
       <!-- ARROW -->
@@ -1807,7 +1800,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <p class="section-lead" data-en="Traditional wire transfers were built for a different era. Puent3 was built for the speed and scale your business needs today." data-es="Las transferencias bancarias tradicionales fueron construidas para otra época. Puent3 fue construido para la velocidad y escala que tu empresa necesita hoy.">Traditional wire transfers were built for a different era. Puent3 was built for the speed and scale your business needs today.</p>
   <div class="features-grid">
     <div class="feat"><div class="feat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><div class="feat-title" data-en="Minutes, Not Days" data-es="Minutos, No Días">Minutes, Not Days</div><div class="feat-desc" data-en="Traditional wires take 3 to 5 business days. Puent3 settles in minutes with the same reliability and a fraction of the cost." data-es="Las transferencias tradicionales toman de 3 a 5 días hábiles. Puent3 liquida en minutos con la misma confiabilidad y una fracción del costo.">Traditional wires take 3 to 5 business days. Puent3 settles in minutes with the same reliability and a fraction of the cost.</div></div>
-    <div class="feat"><div class="feat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div class="feat-title" data-en="Fraction of the Cost" data-es="Una Fracción del Costo">Fraction of the Cost</div><div class="feat-desc" data-en="Traditional bank wires charge 3–5% plus hidden fees and slow settlement times. Puent3 costs a fraction of what banks charge: no correspondent markups, no intermediary cuts, no delays that cost you money." data-es="Las transferencias bancarias tradicionales cobran entre el 3% y el 5% más cargos ocultos y tiempos lentos. Puent3 cuesta una fracción de lo que cobran los bancos: sin márgenes de corresponsales, sin intermediarios, sin retrasos que te cuesten dinero.">Traditional bank wires charge 3–5% plus hidden fees and slow settlement times. Puent3 costs a fraction of what banks charge: no correspondent markups, no intermediary cuts, no delays that cost you money.</div></div>
+    <div class="feat"><div class="feat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div class="feat-title" data-en="Fraction of the Cost" data-es="Una Fracción del Costo">Fraction of the Cost</div><div class="feat-desc" data-en="Traditional bank wires charge 3–5% plus hidden fees and slow settlement times. Puent3 costs a fraction of what banks charge: no correspondent markups, no intermediary cuts, no delays that cost you money." data-es="Las transferencias bancarias tradicionales cobran entre el 3% y el 5% más cargos ocultos y tiempos lentos. Puent3 cuesta una fracción de lo que cobran los bancos — sin márgenes de corresponsales, sin intermediarios, sin retrasos que te cuesten dinero.">Traditional bank wires charge 3–5% plus hidden fees and slow settlement times. Puent3 costs a fraction of what banks charge: no correspondent markups, no intermediary cuts, no delays that cost you money.</div></div>
     <div class="feat"><div class="feat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>️</div><div class="feat-title" data-en="Compliance Built In" data-es="Cumplimiento Integrado">Compliance Built In</div><div class="feat-desc" data-en="Every client is verified before onboarding. Every transaction is screened before processing. Compliance is woven into every step, not bolted on at the end." data-es="Cada cliente es verificado antes del onboarding. Cada transacción es revisada antes de procesarse. El cumplimiento está integrado en cada paso.">Every client is verified before onboarding. Every transaction is screened before processing. Compliance is woven into every step, not bolted on at the end.</div></div>
     <div class="feat"><div class="feat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><div class="feat-title" data-en="Total Transparency" data-es="Transparencia Total">Total Transparency</div><div class="feat-desc" data-en="Every transaction carries an immutable on-chain record. You always know exactly where your money is at every point in its journey." data-es="Cada transacción lleva un registro inmutable en cadena. Siempre sabes exactamente dónde está tu dinero en cada punto de su recorrido.">Every transaction carries an immutable on-chain record. You always know exactly where your money is at every point in its journey.</div></div>
     <div class="feat"><div class="feat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>️</div><div class="feat-title" data-en="Regulatory Foundation" data-es="Base Regulatoria">Regulatory Foundation</div><div class="feat-desc" data-en="Puent3 is a fully incorporated US entity with established banking relationships and proper legal structure. Built to operate responsibly from day one." data-es="Puent3 es una entidad estadounidense completamente constituida con relaciones bancarias establecidas y estructura legal adecuada. Construida para operar responsablemente desde el primer día.">Puent3 is a fully incorporated US entity with established banking relationships and proper legal structure. Built to operate responsibly from day one.</div></div>
@@ -1967,7 +1960,7 @@ document.addEventListener('DOMContentLoaded', function() {
       
       <div class="faq-item">
         <h3 data-en="How do I get started?" data-es="¿Cómo empiezo?">How do I get started?</h3>
-        <p data-en="Start by completing the registration form at the link above. You will then need to submit a set of required business and identity documents for our compliance review. Once your application is reviewed and approved, our team will contact you to complete onboarding. Please allow time for the verification process. We are committed to thorough compliance." data-es="Comienza completando el formulario de registro en el enlace de arriba. Luego deberás enviar un conjunto de documentos empresariales y de identidad requeridos para nuestra revisión de cumplimiento. Una vez revisada y aprobada tu solicitud, nuestro equipo se comunicará contigo para completar el proceso. Por favor, ten en cuenta que la verificación toma tiempo. Estamos comprometidos con un cumplimiento riguroso.">Start by completing the registration form at the link above. You will then need to submit a set of required business and identity documents for our compliance review. Once your application is reviewed and approved, our team will contact you to complete onboarding. Please allow time for the verification process. We are committed to thorough compliance.</p>
+        <p data-en="Start by completing the registration form at the link above. You will then need to submit a set of required business and identity documents for our compliance review. Once your application is reviewed and approved, our team will contact you to complete onboarding. Please allow time for the verification process. We are committed to thorough compliance." data-es="Comienza completando el formulario de registro en el enlace de arriba. Luego deberás enviar un conjunto de documentos empresariales y de identidad requeridos para nuestra revisión de cumplimiento. Una vez revisada y aprobada tu solicitud, nuestro equipo se comunicará contigo para completar el proceso. Por favor, ten en cuenta que la verificación toma tiempo — estamos comprometidos con un cumplimiento riguroso.">Start by completing the registration form at the link above. You will then need to submit a set of required business and identity documents for our compliance review. Once your application is reviewed and approved, our team will contact you to complete onboarding. Please allow time for the verification process. We are committed to thorough compliance.</p>
       </div>
       
       <div class="faq-item">
@@ -2021,7 +2014,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="footer-col">
     <h4 data-en="Contact" data-es="Contacto">Contact</h4>
     <ul>
-      <li><a href="/cdn-cgi/l/email-protection#8de4e3ebe2cdfdf8e8e3f9bea3e4e2"><span class="__cf_email__" data-cfemail="224b4c444d625257474c56110c4b4d">[email&#160;protected]</span></a></li>
+      <li><a href="mailto:info@puent3.io">info@puent3.io</a></li>
       <li><a href="#contact-form" data-en="Contact Us" data-es="Contáctenos">Contact Us</a></li>
     </ul>
   </div>
@@ -2034,10 +2027,10 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 <div class="footer-bottom">
   <p data-en="© 2026 Puent3 LLC. All rights reserved." data-es="© 2026 Puent3 LLC. Todos los derechos reservados.">© 2026 Puent3 LLC. All rights reserved.</p>
-  <p><a href="/cdn-cgi/l/email-protection#2c45424a436c5c594942581f024543"><span class="__cf_email__" data-cfemail="9af3f4fcf5daeaeffff4eea9b4f3f5">[email&#160;protected]</span></a></p>
+  <p><a href="mailto:info@puent3.io">info@puent3.io</a></p>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // toggleMenu defined in head
 
 // Mobile nav links — close menu then scroll
@@ -2235,4 +2228,180 @@ function submitForm(e) {
 
   function init() {
     particles = [];
-    for (var i = 0; i < 3; i+
+    for (var i = 0; i < 3; i+    for (var i = 0; i < 3; i++) spawnParticle();
+    init();
+    draw();
+  }
+
+  window.addEventListener('resize', function() {
+    if (!canvas) return;
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var el = document.getElementById('wa-hero-canvas');
+    if (el) initParticles(el);
+  });
+})();
+</script>
+
+<!-- ── AI CHAT WIDGET ── -->
+<style>
+  #chat-bubble{position:fixed;bottom:220px;right:28px;z-index:8000;display:flex;flex-direction:column;align-items:flex-end;gap:16px}
+  #chat-panel{width:360px;height:520px;background:rgba(10,8,22,0.97);border:1px solid rgba(255,149,219,0.2);border-radius:20px;box-shadow:0 24px 80px rgba(0,0,0,0.6);display:flex;flex-direction:column;overflow:hidden;backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);opacity:0;transform:translateY(16px) scale(0.97);pointer-events:none;transition:opacity 0.25s ease,transform 0.25s ease}
+  #chat-panel.open{opacity:1;transform:translateY(0) scale(1);pointer-events:all}
+  #chat-header{display:flex;align-items:center;justify-content:space-between;padding:16px 18px;border-bottom:1px solid rgba(255,149,219,0.1);background:rgba(255,149,219,0.04);flex-shrink:0}
+  .chat-hdr-left{display:flex;align-items:center;gap:10px}
+  .chat-avatar{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#ff95db 0%,#cc70b0 100%);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#fff;flex-shrink:0}
+  .chat-hdr-name{font-family:"Syne",sans-serif;font-weight:700;font-size:14px;color:#f5f0ff;letter-spacing:-0.01em}
+  .chat-hdr-status{display:flex;align-items:center;gap:5px;font-size:11px;color:rgba(255,149,219,0.65);margin-top:1px}
+  .chat-sdot{width:6px;height:6px;border-radius:50%;background:#4ade80;box-shadow:0 0 6px #4ade80;animation:csdot 2s ease infinite}
+  @keyframes csdot{0%,100%{opacity:1}50%{opacity:0.4}}
+  #chat-close{background:none;border:none;cursor:pointer;color:rgba(245,240,255,0.4);font-size:20px;line-height:1;padding:4px;transition:color 0.2s}
+  #chat-close:hover{color:#f5f0ff}
+  #chat-messages{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px;scroll-behavior:smooth}
+  #chat-messages::-webkit-scrollbar{width:4px}
+  #chat-messages::-webkit-scrollbar-thumb{background:rgba(255,149,219,0.2);border-radius:2px}
+  .cmsg{display:flex;flex-direction:column;max-width:84%;animation:cmsgin 0.2s ease}
+  @keyframes cmsgin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .cmsg.user{align-self:flex-end;align-items:flex-end}
+  .cmsg.assistant{align-self:flex-start;align-items:flex-start}
+  .cbubble{padding:10px 14px;border-radius:16px;font-size:13.5px;line-height:1.6;font-weight:300}
+  .cmsg.user .cbubble{background:linear-gradient(135deg,rgba(255,149,219,0.22),rgba(200,100,180,0.15));border:1px solid rgba(255,149,219,0.3);color:#f5f0ff;border-bottom-right-radius:4px}
+  .cmsg.assistant .cbubble{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:rgba(245,240,255,0.85);border-bottom-left-radius:4px}
+  .ctyping{display:flex;align-items:center;gap:4px;padding:12px 14px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:16px;border-bottom-left-radius:4px;align-self:flex-start}
+  .ctyping span{width:6px;height:6px;border-radius:50%;background:rgba(255,149,219,0.6);animation:ctb 1.2s ease infinite}
+  .ctyping span:nth-child(2){animation-delay:0.15s}
+  .ctyping span:nth-child(3){animation-delay:0.3s}
+  @keyframes ctb{0%,60%,100%{transform:translateY(0);opacity:0.4}30%{transform:translateY(-5px);opacity:1}}
+  #chat-input-wrap{padding:12px 16px;border-top:1px solid rgba(255,149,219,0.1);display:flex;gap:8px;align-items:center;flex-shrink:0}
+  #chat-input{flex:1;background:rgba(255,255,255,0.06);border:1px solid rgba(255,149,219,0.15);border-radius:100px;padding:10px 16px;color:#f5f0ff;font-size:13.5px;font-family:"DM Sans",sans-serif;outline:none;transition:border-color 0.2s}
+  #chat-input::placeholder{color:rgba(245,240,255,0.35)}
+  #chat-input:focus{border-color:rgba(255,149,219,0.4)}
+  #chat-send{width:38px;height:38px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,#ff95db 0%,#cc70b0 100%);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:opacity 0.2s,transform 0.15s;box-shadow:0 4px 16px rgba(255,149,219,0.35)}
+  #chat-send:hover{opacity:0.9;transform:scale(1.05)}
+  #chat-send:disabled{opacity:0.4;cursor:not-allowed;transform:none}
+  #chat-send svg{width:16px;height:16px;fill:white}
+  #chat-trigger-btn{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:100px;background:linear-gradient(135deg,rgba(255,149,219,0.15) 0%,rgba(200,100,180,0.1) 100%);border:1px solid rgba(255,149,219,0.4);color:#ffaee3;font-family:"DM Sans",sans-serif;font-size:13.5px;font-weight:500;cursor:pointer;position:relative;transition:all 0.2s;box-shadow:0 0 20px rgba(255,149,219,0.12),0 4px 16px rgba(0,0,0,0.35);white-space:nowrap;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+  #chat-trigger-btn:hover{background:linear-gradient(135deg,rgba(255,149,219,0.22) 0%,rgba(200,100,180,0.16) 100%);border-color:rgba(255,149,219,0.6);box-shadow:0 0 28px rgba(255,149,219,0.22),0 4px 16px rgba(0,0,0,0.35)}
+  #chat-trigger-btn svg{width:16px;height:16px;fill:#ffaee3;flex-shrink:0}
+  #chat-unread{position:absolute;top:-5px;right:-5px;width:10px;height:10px;border-radius:50%;background:#ff5f5f;border:2px solid #07070f;display:none}
+  .chat-link{color:#ff95db;text-decoration:underline}
+  @media(max-width:640px){#chat-bubble{bottom:20px;right:16px}#chat-panel{width:calc(100vw - 32px);height:70vh}}
+</style>
+
+<div id="chat-bubble">
+  <div id="chat-panel" role="dialog" aria-label="Puent3 Assistant">
+    <div id="chat-header">
+      <div class="chat-hdr-left">
+        <div class="chat-avatar">P</div>
+        <div>
+          <div class="chat-hdr-name">Puent3 Assistant</div>
+          <div class="chat-hdr-status"><div class="chat-sdot"></div><span>Online &middot; EN / ES</span></div>
+        </div>
+      </div>
+      <button id="chat-close" onclick="toggleChatWidget()" aria-label="Close">&#xd7;</button>
+    </div>
+    <div id="chat-messages"></div>
+    <div id="chat-input-wrap">
+      <input id="chat-input" type="text" placeholder="Ask a question..." autocomplete="off"
+             onkeydown="if(event.key==='Enter')sendChatMessage()"/>
+      <button id="chat-send" onclick="sendChatMessage()" aria-label="Send">
+        <svg viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
+      </button>
+    </div>
+  </div>
+  <button id="chat-trigger-btn" onclick="toggleChatWidget()" aria-label="Open chat">
+    <svg id="chat-ico-open" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+    <svg id="chat-ico-close" viewBox="0 0 24 24" style="display:none"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+    <span id="chat-btn-label" data-en="Ask us anything" data-es="Pregúntanos">Ask us anything</span>
+    <div id="chat-unread"></div>
+  </button>
+</div>
+
+<script>
+(function(){
+  var open=false, history=[], greeted=false;
+  var URL='https://puent3-middleware.onrender.com/chat';
+
+  window.toggleChatWidget=function(){
+    open=!open;
+    var p=document.getElementById('chat-panel');
+    var io=document.getElementById('chat-ico-open');
+    var ic=document.getElementById('chat-ico-close');
+    var u=document.getElementById('chat-unread');
+    var lbl=document.getElementById('chat-btn-label');
+    var lang=document.documentElement.lang||'en';
+    if(open){
+      p.classList.add('open'); io.style.display='none'; ic.style.display='block'; u.style.display='none';
+      if(lbl){lbl.textContent=lang==='es'?'Cerrar':'Close';}
+      document.getElementById('chat-input').focus();
+      if(!greeted){greeted=true;setTimeout(greet,400);}
+    } else {
+      p.classList.remove('open'); io.style.display='block'; ic.style.display='none';
+      if(lbl){lbl.setAttribute('data-en','Ask us anything');lbl.setAttribute('data-es','Pregúntanos');lbl.textContent=lang==='es'?'Pregúntanos':'Ask us anything';}
+    }
+  };
+
+  function greet(){
+    var lang=document.documentElement.lang||'en';
+    var msg=lang==='es'
+      ?'Hola, soy el asistente de Puent3. Puedo ayudarte con preguntas sobre cómo funciona nuestra plataforma, el proceso de registro o cómo empezar. En qué te puedo ayudar?'
+      :'Hi, I'm the Puent3 assistant. I can help with questions about how our platform works, the registration process, or how to get started. What can I help you with?';
+    addMsg('assistant',msg);
+  }
+
+  window.sendChatMessage=function(){
+    var inp=document.getElementById('chat-input');
+    var msg=inp.value.trim(); if(!msg)return;
+    inp.value=''; inp.disabled=true;
+    document.getElementById('chat-send').disabled=true;
+    addMsg('user',msg);
+    var t=showTyping();
+    fetch(URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,history:history})})
+    .then(function(r){return r.json();})
+    .then(function(d){
+      rmTyping(t);
+      var reply=d.reply||'Sorry, please try again.';
+      addMsg('assistant',reply);
+      history.push({role:'user',content:msg},{role:'assistant',content:reply});
+      if(history.length>20)history=history.slice(-20);
+    })
+    .catch(function(){
+      rmTyping(t);
+      var e=document.documentElement.lang==='es'?'Lo siento, hubo un error. Intenta de nuevo.':'Sorry, something went wrong. Please try again.';
+      addMsg('assistant',e);
+    })
+    .finally(function(){
+      inp.disabled=false;
+      document.getElementById('chat-send').disabled=false;
+      inp.focus();
+    });
+  };
+
+  function addMsg(role,text){
+    var m=document.getElementById('chat-messages');
+    var w=document.createElement('div'); w.className='cmsg '+role;
+    var b=document.createElement('div'); b.className='cbubble';
+    var s=text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    s=s.replace(/(https?:\/\/[^\s]+)/g,'<a href="$1" target="_blank" rel="noopener" class="chat-link">$1<\/a>');
+    b.innerHTML=s; w.appendChild(b); m.appendChild(w);
+    m.scrollTop=m.scrollHeight;
+  }
+
+  function showTyping(){
+    var m=document.getElementById('chat-messages');
+    var d=document.createElement('div'); d.className='ctyping'; d.id='ctind';
+    d.innerHTML='<span></span><span></span><span></span>';
+    m.appendChild(d); m.scrollTop=m.scrollHeight; return d;
+  }
+
+  function rmTyping(el){if(el&&el.parentNode)el.parentNode.removeChild(el);}
+
+  setTimeout(function(){if(!open)document.getElementById('chat-unread').style.display='block';},9000);
+})();
+</script>
+<!-- ── END CHAT WIDGET ── -->
+</body>
+</html>
