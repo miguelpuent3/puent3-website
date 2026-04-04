@@ -66,7 +66,7 @@
   .tos-hero h1 { font-family: "Syne", sans-serif; font-weight: 800; font-size: clamp(36px, 5vw, 58px); line-height: 1.08; letter-spacing: -0.032em; color: var(--white); margin-bottom: 20px; }
   .tos-hero h1 em { font-style: normal; color: var(--pink-vivid); }
   .tos-meta { font-size: 14px; color: var(--white-muted); margin-bottom: 8px; }
-  .tos-draft-notice { display: inline-block; background: rgba(255,200,50,0.1); border: 1px solid rgba(255,200,50,0.3); color: rgba(255,220,80,0.9); font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 6px 16px; border-radius: 100px; margin-top: 12px; }
+  .tos-draft-notice { display: none; background: rgba(255,200,50,0.1); border: 1px solid rgba(255,200,50,0.3); color: rgba(255,220,80,0.9); font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 6px 16px; border-radius: 100px; margin-top: 12px; }
   .tos-divider { width: 60px; height: 1px; background: linear-gradient(to right, transparent, var(--pink), transparent); margin: 48px auto; }
   .tos-content { max-width: 860px; margin: 0 auto; padding: 0 60px 120px; }
   .tos-lang-block { display: block; }
@@ -74,6 +74,8 @@
   .tos-section { background: var(--glass-bg); border: 1px solid var(--border-glass); border-radius: 20px; padding: 40px 44px; margin-bottom: 20px; backdrop-filter: blur(14px); transition: border-color 0.3s; }
   .tos-section:hover { border-color: rgba(255,149,219,0.2); }
   .tos-section-num { font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--pink); opacity: 0.7; margin-bottom: 10px; }
+  .tos-section a { color: var(--pink-bright); text-decoration: none; }
+  .tos-section a:hover { text-decoration: underline; }
   .tos-section h2 { font-family: "Syne", sans-serif; font-weight: 700; font-size: 20px; color: var(--white); margin-bottom: 18px; letter-spacing: -0.02em; }
   .tos-section p { font-size: 15px; color: var(--white-dim); line-height: 1.85; font-weight: 300; margin-bottom: 14px; }
   .tos-section p:last-child { margin-bottom: 0; }
@@ -110,8 +112,8 @@
 <div class="tos-hero">
   <div class="tos-tag" id="tos-hero-tag">Legal Document</div>
   <h1 id="tos-hero-h1">Electronic Disclosure<br><em>&amp; E-Sign Consent</em></h1>
-  <div class="tos-meta" id="tos-hero-meta">Puent3 LLC &middot; Effective Date: 2026 &middot; Version 1.0</div>
-  <div class="tos-draft-notice" id="tos-hero-draft">&#9888; Draft &mdash; Pending Legal Review</div>
+  <div class="tos-meta" id="tos-hero-meta">Puent3 LLC &middot; Effective Date: April 3, 2026 &middot; Version 1.0</div>
+  <div class="tos-draft-notice" id="tos-hero-draft"></div>
   <div class="tos-divider"></div>
 </div>
 <div class="tos-content">
@@ -166,13 +168,13 @@
       <li>An active email address capable of receiving messages</li>
       <li>Software capable of opening PDF files (for downloaded documents)</li>
     </ul>
-    <p>You are responsible for ensuring that your hardware and software meet these requirements and for keeping your contact information current with Puent3. Notify us promptly at <a href="mailto:legal@puent3.io" style="color:var(--pink-bright);">legal@puent3.io</a> if your email address or phone number changes.</p>
+    <p>You are responsible for ensuring that your hardware and software meet these requirements and for keeping your contact information current with Puent3. Notify us promptly at <a href="mailto:legal@puent3.io">legal@puent3.io</a> if your email address or phone number changes.</p>
   </div>
 
   <div class="tos-section">
     <div class="tos-section-num">Section 5</div>
     <h2>Right to Withdraw Consent</h2>
-    <p>You have the right to withdraw your consent to receive records electronically at any time. To withdraw consent, contact us at <a href="mailto:legal@puent3.io" style="color:var(--pink-bright);">legal@puent3.io</a> with the subject line "Withdraw Electronic Consent."</p>
+    <p>You have the right to withdraw your consent to receive records electronically at any time. To withdraw consent, contact us at <a href="mailto:legal@puent3.io">legal@puent3.io</a> with the subject line "Withdraw Electronic Consent."</p>
     <p>Please note the following regarding withdrawal of consent:</p>
     <ul>
       <li>Withdrawal of consent does not affect the legal validity of any electronic records or signatures provided before the withdrawal.</li>
@@ -185,13 +187,13 @@
   <div class="tos-section">
     <div class="tos-section-num">Section 6</div>
     <h2>Requesting Paper Copies</h2>
-    <p>You may request a paper copy of any electronic record by contacting us at <a href="mailto:legal@puent3.io" style="color:var(--pink-bright);">legal@puent3.io</a>. We will provide paper copies upon request. Puent3 reserves the right to charge a reasonable fee for paper copies to cover administrative costs; any such fee will be disclosed before the request is processed.</p>
+    <p>You may request a paper copy of any electronic record by contacting us at <a href="mailto:legal@puent3.io">legal@puent3.io</a>. We will provide paper copies upon request. Puent3 reserves the right to charge a reasonable fee for paper copies to cover administrative costs; any such fee will be disclosed before the request is processed.</p>
   </div>
 
   <div class="tos-section">
     <div class="tos-section-num">Section 7</div>
     <h2>Updating Your Contact Information</h2>
-    <p>It is your responsibility to keep your contact information current so that Puent3 can deliver electronic communications to you. To update your email address, phone number, or other contact information, contact us at <a href="mailto:info@puent3.io" style="color:var(--pink-bright);">info@puent3.io</a>.</p>
+    <p>It is your responsibility to keep your contact information current so that Puent3 can deliver electronic communications to you. To update your email address, phone number, or other contact information, contact us at <a href="mailto:legal@puent3.io">legal@puent3.io</a>.</p>
     <p>Puent3 is not responsible for communications that are not received due to outdated contact information on file.</p>
   </div>
 
@@ -205,7 +207,7 @@
     <div class="tos-section-num">Section 9</div>
     <h2>Changes to This Disclosure</h2>
     <p>Puent3 may update this Disclosure at any time. Material changes will be communicated at least seven (7) days before the effective date. Continued use of the Services after the effective date constitutes acceptance of the updated Disclosure. The current version is always available at puent3.io/disclosure.</p>
-    <div class="tos-highlight"><strong>Questions?</strong> Contact us at <a href="mailto:legal@puent3.io" style="color:var(--pink-bright);">legal@puent3.io</a></div>
+    <div class="tos-highlight"><strong>Questions?</strong> Contact us at <a href="mailto:legal@puent3.io">legal@puent3.io</a></div>
   </div>
 
 </div><!-- /tos-en -->
@@ -260,13 +262,13 @@
       <li>Una dirección de correo electrónico activa capaz de recibir mensajes</li>
       <li>Software capaz de abrir archivos PDF (para documentos descargados)</li>
     </ul>
-    <p>Usted es responsable de garantizar que su hardware y software cumplan con estos requisitos y de mantener su información de contacto actualizada con Puent3. Notifíquenos de inmediato en <a href="mailto:legal@puent3.io" style="color:var(--pink-bright);">legal@puent3.io</a> si cambia su dirección de correo electrónico o número de teléfono.</p>
+    <p>Usted es responsable de garantizar que su hardware y software cumplan con estos requisitos y de mantener su información de contacto actualizada con Puent3. Notifíquenos de inmediato en <a href="mailto:legal@puent3.io">legal@puent3.io</a> si cambia su dirección de correo electrónico o número de teléfono.</p>
   </div>
 
   <div class="tos-section">
     <div class="tos-section-num">Sección 5</div>
     <h2>Derecho a Retirar el Consentimiento</h2>
-    <p>Tiene el derecho de retirar su consentimiento para recibir registros electrónicamente en cualquier momento. Para retirar el consentimiento, contáctenos en <a href="mailto:legal@puent3.io" style="color:var(--pink-bright);">legal@puent3.io</a> con el asunto "Retirar Consentimiento Electrónico."</p>
+    <p>Tiene el derecho de retirar su consentimiento para recibir registros electrónicamente en cualquier momento. Para retirar el consentimiento, contáctenos en <a href="mailto:legal@puent3.io">legal@puent3.io</a> con el asunto "Retirar Consentimiento Electrónico."</p>
     <ul>
       <li>El retiro del consentimiento no afecta la validez legal de los registros o firmas electrónicas proporcionados antes del retiro.</li>
       <li>Si retira el consentimiento, Puent3 puede no poder brindarle ciertos Servicios, ya que nuestra plataforma está diseñada para operar electrónicamente.</li>
@@ -277,13 +279,13 @@
   <div class="tos-section">
     <div class="tos-section-num">Sección 6</div>
     <h2>Solicitud de Copias en Papel</h2>
-    <p>Puede solicitar una copia en papel de cualquier registro electrónico contactándonos en <a href="mailto:legal@puent3.io" style="color:var(--pink-bright);">legal@puent3.io</a>. Proporcionaremos copias en papel previa solicitud. Puent3 se reserva el derecho de cobrar una tarifa razonable por copias en papel; cualquier tarifa de este tipo se divulgará antes de procesar la solicitud.</p>
+    <p>Puede solicitar una copia en papel de cualquier registro electrónico contactándonos en <a href="mailto:legal@puent3.io">legal@puent3.io</a>. Proporcionaremos copias en papel previa solicitud. Puent3 se reserva el derecho de cobrar una tarifa razonable por copias en papel; cualquier tarifa de este tipo se divulgará antes de procesar la solicitud.</p>
   </div>
 
   <div class="tos-section">
     <div class="tos-section-num">Sección 7</div>
     <h2>Actualización de su Información de Contacto</h2>
-    <p>Es su responsabilidad mantener actualizada su información de contacto para que Puent3 pueda entregarle comunicaciones electrónicas. Para actualizar su dirección de correo electrónico, número de teléfono u otra información de contacto, contáctenos en <a href="mailto:info@puent3.io" style="color:var(--pink-bright);">info@puent3.io</a>.</p>
+    <p>Es su responsabilidad mantener actualizada su información de contacto para que Puent3 pueda entregarle comunicaciones electrónicas. Para actualizar su dirección de correo electrónico, número de teléfono u otra información de contacto, contáctenos en <a href="mailto:legal@puent3.io">legal@puent3.io</a>.</p>
   </div>
 
   <div class="tos-section">
@@ -296,7 +298,7 @@
     <div class="tos-section-num">Sección 9</div>
     <h2>Cambios a Esta Divulgación</h2>
     <p>Puent3 puede actualizar esta Divulgación en cualquier momento. Los cambios materiales se comunicarán al menos siete (7) días antes de la fecha de vigencia. El uso continuo de los Servicios después de la fecha de vigencia constituye la aceptación de la Divulgación actualizada. La versión actual siempre está disponible en puent3.io/disclosure.</p>
-    <div class="tos-highlight"><strong>¿Preguntas?</strong> Contáctenos en <a href="mailto:legal@puent3.io" style="color:var(--pink-bright);">legal@puent3.io</a></div>
+    <div class="tos-highlight"><strong>¿Preguntas?</strong> Contáctenos en <a href="mailto:legal@puent3.io">legal@puent3.io</a></div>
   </div>
 
 </div><!-- /tos-es -->
@@ -304,45 +306,61 @@
 <div class="tos-footer">
   <p>&copy; 2026 Puent3 LLC &middot; All rights reserved &middot; <a href="/">puent3.io</a></p>
   <div class="legal-links">
-    <a href="/terms" >Terms of Service</a>
-    <a href="/privacy" >Privacy Policy</a>
-    <a href="/disclosure" class='current'>Electronic Disclosure</a>
-    <a href="/glba" >GLBA Privacy Notice</a>
+    <a href="terms.html" >Terms of Service</a>
+    <a href="privacy.html" >Privacy Policy</a>
+    <a href="disclosure.html" class="current">Electronic Disclosure</a>
+    <a href="glba.html" >GLBA Privacy Notice</a>
+    <a href="cookie-policy.html" >Cookie Policy</a>
+    <a href="fees.html" >Fee Schedule</a>
+    <a href="documents.html">Document Center</a>
   </div>
-  <p style="margin-top:16px;font-size:12px;color:rgba(245,240,255,0.35);">This document is a draft pending legal review. It does not constitute legal advice.</p>
-</div><script>
+</div>
+
+<script>
 (function() {
   var lastScrollY = 0, ticking = false;
   window.addEventListener('scroll', function() {
-    if (!ticking) { window.requestAnimationFrame(function() {
-      var nav = document.getElementById('nav');
-      var y = window.scrollY || window.pageYOffset;
-      if (nav) nav.classList.toggle('scrolled', y > 60);
-      lastScrollY = y; ticking = false;
-    }); ticking = true; }
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        var nav = document.getElementById('nav');
+        var y = window.scrollY || window.pageYOffset;
+        if (nav) nav.classList.toggle('scrolled', y > 60);
+        lastScrollY = y; ticking = false;
+      }); ticking = true;
+    }
   });
   window.dispatchEvent(new Event('scroll'));
 })();
+
 function setTosLang(lang) {
-  document.getElementById('tos-lang-en').classList.toggle('active', lang === 'en');
-  document.getElementById('tos-lang-es').classList.toggle('active', lang === 'es');
-  var en = document.getElementById('tos-en'), es = document.getElementById('tos-es');
-  if (en) en.style.display = lang==='en'?'block':'none';
-  if (es) es.style.display = lang==='es'?'block':'none';
-  var heroTag=document.getElementById('tos-hero-tag'), heroH1=document.getElementById('tos-hero-h1');
-  var heroMeta=document.getElementById('tos-hero-meta'), heroDraft=document.getElementById('tos-hero-draft');
-  if (lang==='es') {
-    if(heroTag) heroTag.textContent='Documento Legal';
-    if(heroH1) heroH1.innerHTML='Divulgaci&oacute;n Electr&oacute;nica<br><em>y Consentimiento E-Sign</em>';
-    if(heroMeta) heroMeta.textContent='Puent3 LLC · Fecha de Vigencia: 2026 · Versión 1.0';
-    if(heroDraft) heroDraft.textContent='⚠ Borrador — Pendiente de Revisión Legal';
+  var enBtn = document.getElementById('tos-lang-en');
+  var esBtn = document.getElementById('tos-lang-es');
+  if (enBtn) enBtn.classList.toggle('active', lang === 'en');
+  if (esBtn) esBtn.classList.toggle('active', lang === 'es');
+  var enBlock = document.getElementById('tos-en');
+  var esBlock = document.getElementById('tos-es');
+  if (enBlock) enBlock.style.display = lang === 'en' ? 'block' : 'none';
+  if (esBlock) esBlock.style.display = lang === 'es' ? 'block' : 'none';
+  var heroTag  = document.getElementById('tos-hero-tag');
+  var heroH1   = document.getElementById('tos-hero-h1');
+  var heroMeta = document.getElementById('tos-hero-meta');
+  if (lang === 'es') {
+    if (heroTag)  heroTag.textContent  = 'Documento Legal';
+    if (heroH1)   heroH1.innerHTML     = 'Divulgación Electrónica<br><em>y Consentimiento</em>';
+    if (heroMeta) heroMeta.textContent = 'Puent3 LLC · Fecha de Vigencia: 3 de abril de 2026 · Versión 1.0';
   } else {
-    if(heroTag) heroTag.textContent='Legal Document';
-    if(heroH1) heroH1.innerHTML='Electronic Disclosure<br><em>&amp; E-Sign Consent</em>';
-    if(heroMeta) heroMeta.textContent='Puent3 LLC · Effective Date: 2026 · Version 1.0';
-    if(heroDraft) heroDraft.textContent='⚠ Draft — Pending Legal Review';
+    if (heroMeta) heroMeta.textContent = 'Puent3 LLC · Effective Date: April 3, 2026 · Version 1.0';
   }
+  try { localStorage.setItem('puent3_legal_lang', lang); } catch(e) {}
 }
+(function() {
+  try {
+    var saved = localStorage.getItem('puent3_legal_lang');
+    if (saved) { setTosLang(saved); return; }
+    var browser = (navigator.language || 'en').toLowerCase();
+    setTosLang(browser.startsWith('es') ? 'es' : 'en');
+  } catch(e) { setTosLang('en'); }
+})();
 </script>
 </body>
 </html>

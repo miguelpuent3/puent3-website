@@ -67,7 +67,7 @@
   .tos-hero h1 { font-family: "Syne", sans-serif; font-weight: 800; font-size: clamp(36px, 5vw, 58px); line-height: 1.08; letter-spacing: -0.032em; color: var(--white); margin-bottom: 20px; }
   .tos-hero h1 em { font-style: normal; color: var(--pink-vivid); }
   .tos-meta { font-size: 14px; color: var(--white-muted); margin-bottom: 8px; }
-  .tos-draft-notice { display: inline-block; background: rgba(255,200,50,0.1); border: 1px solid rgba(255,200,50,0.3); color: rgba(255,220,80,0.9); font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 6px 16px; border-radius: 100px; margin-top: 12px; }
+  .tos-draft-notice { display: none; background: rgba(255,200,50,0.1); border: 1px solid rgba(255,200,50,0.3); color: rgba(255,220,80,0.9); font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 6px 16px; border-radius: 100px; margin-top: 12px; }
   .tos-divider { width: 60px; height: 1px; background: linear-gradient(to right, transparent, var(--pink), transparent); margin: 48px auto; }
   .tos-content { max-width: 860px; margin: 0 auto; padding: 0 60px 120px; }
   .tos-lang-block { display: block; }
@@ -75,6 +75,8 @@
   .tos-section { background: var(--glass-bg); border: 1px solid var(--border-glass); border-radius: 20px; padding: 40px 44px; margin-bottom: 20px; backdrop-filter: blur(14px); transition: border-color 0.3s; }
   .tos-section:hover { border-color: rgba(255,149,219,0.2); }
   .tos-section-num { font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--pink); opacity: 0.7; margin-bottom: 10px; }
+  .tos-section a { color: var(--pink-bright); text-decoration: none; }
+  .tos-section a:hover { text-decoration: underline; }
   .tos-section h2 { font-family: "Syne", sans-serif; font-weight: 700; font-size: 20px; color: var(--white); margin-bottom: 18px; letter-spacing: -0.02em; }
   .tos-section p { font-size: 15px; color: var(--white-dim); line-height: 1.85; font-weight: 300; margin-bottom: 14px; }
   .tos-section p:last-child { margin-bottom: 0; }
@@ -114,8 +116,8 @@
 <div class="tos-hero">
   <div class="tos-tag" id="tos-hero-tag">Legal Document</div>
   <h1 id="tos-hero-h1">Privacy<br><em>Policy</em></h1>
-  <div class="tos-meta" id="tos-hero-meta">Puent3 LLC &middot; Effective Date: 2026 &middot; Version 1.0</div>
-  <div class="tos-draft-notice" id="tos-hero-draft">&#9888; Draft &mdash; Pending Legal Review</div>
+  <div class="tos-meta" id="tos-hero-meta">Puent3 LLC &middot; Effective Date: April 3, 2026 &middot; Version 1.0</div>
+  <div class="tos-draft-notice" id="tos-hero-draft"></div>
   <div class="tos-divider"></div>
 </div>
 
@@ -129,7 +131,7 @@
     <h2>Introduction</h2>
     <p>Puent3 LLC ("Puent3," "we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard information about you when you use our cross-border stablecoin payment platform, website (puent3.io), WhatsApp interface, and related services (collectively, the "Services").</p>
     <p>By using our Services, you acknowledge that you have read and understood this Privacy Policy. If you do not agree with this policy, please do not use our Services.</p>
-    <div class="tos-highlight"><strong>Applicable laws:</strong> This policy is designed to comply with applicable privacy laws including the US Federal Privacy Act, the Gramm-Leach-Bliley Act (GLBA), Colombia's Law 1581 of 2012 (Ley de Protección de Datos Personales), Canada's Personal Information Protection and Electronic Documents Act (PIPEDA), and other applicable data protection laws in the jurisdictions where we operate.</div>
+    <div class="tos-highlight"><strong>Applicable laws:</strong> This policy is designed to comply with applicable privacy laws including the US Federal Privacy Act, the Gramm-Leach-Bliley Act (GLBA), Colombia's Law 1581 of 2012 (Ley de Protección de Datos Personales), Argentina's Personal Data Protection Law 25.326, Canada's Personal Information Protection and Electronic Documents Act (PIPEDA), and other applicable data protection laws in the jurisdictions where we operate.</div>
   </div>
 
   <div class="tos-section">
@@ -208,7 +210,7 @@
       <li><strong>Portability:</strong> The right to receive your data in a structured, machine-readable format.</li>
       <li><strong>Objection:</strong> The right to object to certain processing activities.</li>
     </ul>
-    <p>To exercise any of these rights, contact us at <a href="mailto:legal@puent3.io" style="color: var(--pink-bright);">legal@puent3.io</a>. We will respond within thirty (30) days. Note that certain rights may be limited where we are required to retain data by law or where data is necessary for a legitimate ongoing purpose.</p>
+    <p>To exercise any of these rights, contact us at <a href="mailto:legal@puent3.io">legal@puent3.io</a>. We will respond within thirty (30) days. Note that certain rights may be limited where we are required to retain data by law or where data is necessary for a legitimate ongoing purpose.</p>
     <div class="tos-highlight"><strong>Colombian residents:</strong> You have additional rights under Law 1581 of 2012, including the right to file complaints with the Superintendencia de Industria y Comercio (SIC) if you believe your data rights have been violated.<br><br><strong>Canadian residents:</strong> You have rights under PIPEDA to access and correct personal information and to file complaints with the Office of the Privacy Commissioner of Canada.</div>
   </div>
 
@@ -236,7 +238,7 @@
     <h2>Contact</h2>
     <p>For privacy-related questions, requests, or complaints, contact us at:</p>
     <ul>
-      <li><strong>Email:</strong> <a href="mailto:legal@puent3.io" style="color: var(--pink-bright);">legal@puent3.io</a></li>
+      <li><strong>Email:</strong> <a href="mailto:legal@puent3.io">legal@puent3.io</a></li>
       <li><strong>Company:</strong> Puent3 LLC, Wyoming, USA</li>
     </ul>
   </div>
@@ -330,7 +332,7 @@
       <li><strong>Portabilidad:</strong> El derecho a recibir sus datos en un formato estructurado y legible por máquina.</li>
       <li><strong>Objeción:</strong> El derecho a oponerse a ciertas actividades de procesamiento.</li>
     </ul>
-    <p>Para ejercer cualquiera de estos derechos, contáctenos en <a href="mailto:legal@puent3.io" style="color: var(--pink-bright);">legal@puent3.io</a>. Responderemos dentro de treinta (30) días.</p>
+    <p>Para ejercer cualquiera de estos derechos, contáctenos en <a href="mailto:legal@puent3.io">legal@puent3.io</a>. Responderemos dentro de treinta (30) días.</p>
     <div class="tos-highlight"><strong>Residentes colombianos:</strong> Tiene derechos adicionales bajo la Ley 1581 de 2012, incluido el derecho a presentar quejas ante la Superintendencia de Industria y Comercio (SIC).<br><br><strong>Residentes canadienses:</strong> Tiene derechos bajo PIPEDA para acceder y corregir información personal y presentar quejas ante la Oficina del Comisionado de Privacidad de Canadá.</div>
   </div>
 
@@ -358,7 +360,7 @@
     <h2>Contacto</h2>
     <p>Para preguntas, solicitudes o quejas relacionadas con la privacidad, contáctenos en:</p>
     <ul>
-      <li><strong>Correo electrónico:</strong> <a href="mailto:legal@puent3.io" style="color: var(--pink-bright);">legal@puent3.io</a></li>
+      <li><strong>Correo electrónico:</strong> <a href="mailto:legal@puent3.io">legal@puent3.io</a></li>
       <li><strong>Empresa:</strong> Puent3 LLC, Wyoming, EE. UU.</li>
     </ul>
   </div>
@@ -369,12 +371,14 @@
 <div class="tos-footer">
   <p>&copy; 2026 Puent3 LLC &middot; All rights reserved &middot; <a href="/">puent3.io</a></p>
   <div class="legal-links">
-    <a href="/terms" >Terms of Service</a>
-    <a href="/privacy" class='current'>Privacy Policy</a>
-    <a href="/disclosure" >Electronic Disclosure</a>
-    <a href="/glba" >GLBA Privacy Notice</a>
+    <a href="terms.html" >Terms of Service</a>
+    <a href="privacy.html" class="current">Privacy Policy</a>
+    <a href="disclosure.html" >Electronic Disclosure</a>
+    <a href="glba.html" >GLBA Privacy Notice</a>
+    <a href="cookie-policy.html" >Cookie Policy</a>
+    <a href="fees.html" >Fee Schedule</a>
+    <a href="documents.html">Document Center</a>
   </div>
-  <p style="margin-top:16px; font-size:12px; color: rgba(245,240,255,0.35);">This document is a draft pending legal review. It does not constitute legal advice.</p>
 </div>
 
 <script>
@@ -385,38 +389,43 @@
       window.requestAnimationFrame(function() {
         var nav = document.getElementById('nav');
         var y = window.scrollY || window.pageYOffset;
-        if (nav) { nav.classList.toggle('scrolled', y > 60); }
+        if (nav) nav.classList.toggle('scrolled', y > 60);
         lastScrollY = y; ticking = false;
-      });
-      ticking = true;
+      }); ticking = true;
     }
   });
   window.dispatchEvent(new Event('scroll'));
 })();
 
 function setTosLang(lang) {
-  document.getElementById('tos-lang-en').classList.toggle('active', lang === 'en');
-  document.getElementById('tos-lang-es').classList.toggle('active', lang === 'es');
-  var en = document.getElementById('tos-en');
-  var es = document.getElementById('tos-es');
-  if (en) en.style.display = lang === 'en' ? 'block' : 'none';
-  if (es) es.style.display = lang === 'es' ? 'block' : 'none';
-  var heroTag = document.getElementById('tos-hero-tag');
-  var heroH1 = document.getElementById('tos-hero-h1');
+  var enBtn = document.getElementById('tos-lang-en');
+  var esBtn = document.getElementById('tos-lang-es');
+  if (enBtn) enBtn.classList.toggle('active', lang === 'en');
+  if (esBtn) esBtn.classList.toggle('active', lang === 'es');
+  var enBlock = document.getElementById('tos-en');
+  var esBlock = document.getElementById('tos-es');
+  if (enBlock) enBlock.style.display = lang === 'en' ? 'block' : 'none';
+  if (esBlock) esBlock.style.display = lang === 'es' ? 'block' : 'none';
+  var heroTag  = document.getElementById('tos-hero-tag');
+  var heroH1   = document.getElementById('tos-hero-h1');
   var heroMeta = document.getElementById('tos-hero-meta');
-  var heroDraft = document.getElementById('tos-hero-draft');
   if (lang === 'es') {
-    if (heroTag) heroTag.textContent = 'Documento Legal';
-    if (heroH1) heroH1.innerHTML = 'Pol&iacute;tica de<br><em>Privacidad</em>';
-    if (heroMeta) heroMeta.textContent = 'Puent3 LLC · Fecha de Vigencia: 2026 · Versión 1.0';
-    if (heroDraft) heroDraft.textContent = '⚠ Borrador — Pendiente de Revisión Legal';
+    if (heroTag)  heroTag.textContent  = 'Documento Legal';
+    if (heroH1)   heroH1.innerHTML     = 'Política de<br><em>Privacidad</em>';
+    if (heroMeta) heroMeta.textContent = 'Puent3 LLC · Fecha de Vigencia: 3 de abril de 2026 · Versión 1.0';
   } else {
-    if (heroTag) heroTag.textContent = 'Legal Document';
-    if (heroH1) heroH1.innerHTML = 'Privacy<br><em>Policy</em>';
-    if (heroMeta) heroMeta.textContent = 'Puent3 LLC · Effective Date: 2026 · Version 1.0';
-    if (heroDraft) heroDraft.textContent = '⚠ Draft — Pending Legal Review';
+    if (heroMeta) heroMeta.textContent = 'Puent3 LLC · Effective Date: April 3, 2026 · Version 1.0';
   }
+  try { localStorage.setItem('puent3_legal_lang', lang); } catch(e) {}
 }
+(function() {
+  try {
+    var saved = localStorage.getItem('puent3_legal_lang');
+    if (saved) { setTosLang(saved); return; }
+    var browser = (navigator.language || 'en').toLowerCase();
+    setTosLang(browser.startsWith('es') ? 'es' : 'en');
+  } catch(e) { setTosLang('en'); }
+})();
 </script>
 </body>
 </html>

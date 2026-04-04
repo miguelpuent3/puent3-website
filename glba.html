@@ -63,7 +63,7 @@
   .tos-hero h1 { font-family: "Syne", sans-serif; font-weight: 800; font-size: clamp(36px, 5vw, 58px); line-height: 1.08; letter-spacing: -0.032em; color: var(--white); margin-bottom: 20px; }
   .tos-hero h1 em { font-style: normal; color: var(--pink-vivid); }
   .tos-meta { font-size: 14px; color: var(--white-muted); margin-bottom: 8px; }
-  .tos-draft-notice { display: inline-block; background: rgba(255,200,50,0.1); border: 1px solid rgba(255,200,50,0.3); color: rgba(255,220,80,0.9); font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 6px 16px; border-radius: 100px; margin-top: 12px; }
+  .tos-draft-notice { display: none; background: rgba(255,200,50,0.1); border: 1px solid rgba(255,200,50,0.3); color: rgba(255,220,80,0.9); font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 6px 16px; border-radius: 100px; margin-top: 12px; }
   .tos-divider { width: 60px; height: 1px; background: linear-gradient(to right, transparent, var(--pink), transparent); margin: 48px auto; }
   .tos-content { max-width: 860px; margin: 0 auto; padding: 0 60px 120px; }
   .tos-lang-block { display: block; }
@@ -71,6 +71,8 @@
   .tos-section { background: var(--glass-bg); border: 1px solid var(--border-glass); border-radius: 20px; padding: 40px 44px; margin-bottom: 20px; backdrop-filter: blur(14px); transition: border-color 0.3s; }
   .tos-section:hover { border-color: rgba(255,149,219,0.2); }
   .tos-section-num { font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--pink); opacity: 0.7; margin-bottom: 10px; }
+  .tos-section a { color: var(--pink-bright); text-decoration: none; }
+  .tos-section a:hover { text-decoration: underline; }
   .tos-section h2 { font-family: "Syne", sans-serif; font-weight: 700; font-size: 20px; color: var(--white); margin-bottom: 18px; letter-spacing: -0.02em; }
   .tos-section p { font-size: 15px; color: var(--white-dim); line-height: 1.85; font-weight: 300; margin-bottom: 14px; }
   .tos-section p:last-child { margin-bottom: 0; }
@@ -106,8 +108,8 @@
 <div class="tos-hero">
   <div class="tos-tag" id="tos-hero-tag">Legal Document</div>
   <h1 id="tos-hero-h1">GLBA<br><em>Privacy Notice</em></h1>
-  <div class="tos-meta" id="tos-hero-meta">Puent3 LLC &middot; Effective Date: 2026 &middot; Version 1.0</div>
-  <div class="tos-draft-notice" id="tos-hero-draft">&#9888; Draft &mdash; Pending Legal Review</div>
+  <div class="tos-meta" id="tos-hero-meta">Puent3 LLC &middot; Effective Date: April 3, 2026 &middot; Version 1.0</div>
+  <div class="tos-draft-notice" id="tos-hero-draft"></div>
   <div class="tos-divider"></div>
 </div>
 <div class="tos-content">
@@ -195,7 +197,7 @@
     <h2>Who We Are</h2>
     <table class="tos-table">
       <tr><th>Question</th><th>Answer</th></tr>
-      <tr><td>Who is providing this notice?</td><td>Puent3 LLC, a Wyoming limited liability company operating as a cross-border stablecoin payment facilitator.</td></tr>
+      <tr><td>Who is providing this notice?</td><td>Puent3 LLC, a Wyoming limited liability company operating as a cross-border stablecoin payment facilitator. Puent3 uses Bridge (bridge.xyz) as its licensed off-ramp partner to convert stablecoins to local fiat currency.</td></tr>
       <tr><td>How does Puent3 collect my personal information?</td><td>We collect your personal information when you register for an account, use our payment services, or communicate with us. We may also collect it from identity verification providers and sanctions databases.</td></tr>
       <tr><td>Why can't I limit all sharing?</td><td>Federal law gives you the right to limit only certain types of sharing (sharing for affiliates' everyday business purposes, affiliates using your information to market to you, and sharing for nonaffiliates to market to you). We do not engage in the types of sharing you can limit.</td></tr>
       <tr><td>What happens when I limit sharing for an account I hold jointly with someone else?</td><td>Your choices will apply to everyone on your account.</td></tr>
@@ -217,7 +219,7 @@
     <h2>Other Important Disclosures</h2>
     <p><strong>Former clients:</strong> If you close your account, we will continue to share information about you as described in this notice for as long as required by law.</p>
     <p><strong>Changes to this notice:</strong> We may update this notice annually or whenever our privacy practices change. We will distribute a new notice as required by law. The current version is always available at puent3.io/glba.</p>
-    <p><strong>Questions:</strong> Contact us at <a href="mailto:legal@puent3.io" style="color:var(--pink-bright);">legal@puent3.io</a></p>
+    <p><strong>Questions:</strong> Contact us at <a href="mailto:legal@puent3.io">legal@puent3.io</a></p>
   </div>
 
 </div><!-- /tos-en -->
@@ -327,7 +329,7 @@
     <h2>Otras Divulgaciones Importantes</h2>
     <p><strong>Ex clientes:</strong> Si cierra su cuenta, continuaremos compartiendo información sobre usted como se describe en este aviso durante el tiempo requerido por la ley.</p>
     <p><strong>Cambios a este aviso:</strong> Podemos actualizar este aviso anualmente o cuando cambien nuestras prácticas de privacidad. La versión actual siempre está disponible en puent3.io/glba.</p>
-    <p><strong>Preguntas:</strong> Contáctenos en <a href="mailto:legal@puent3.io" style="color:var(--pink-bright);">legal@puent3.io</a></p>
+    <p><strong>Preguntas:</strong> Contáctenos en <a href="mailto:legal@puent3.io">legal@puent3.io</a></p>
   </div>
 
 </div><!-- /tos-es -->
@@ -335,29 +337,61 @@
 <div class="tos-footer">
   <p>&copy; 2026 Puent3 LLC &middot; All rights reserved &middot; <a href="/">puent3.io</a></p>
   <div class="legal-links">
-    <a href="/terms" >Terms of Service</a>
-    <a href="/privacy" >Privacy Policy</a>
-    <a href="/disclosure" >Electronic Disclosure</a>
-    <a href="/glba" class='current'>GLBA Privacy Notice</a>
+    <a href="terms.html" >Terms of Service</a>
+    <a href="privacy.html" >Privacy Policy</a>
+    <a href="disclosure.html" >Electronic Disclosure</a>
+    <a href="glba.html" class="current">GLBA Privacy Notice</a>
+    <a href="cookie-policy.html" >Cookie Policy</a>
+    <a href="fees.html" >Fee Schedule</a>
+    <a href="documents.html">Document Center</a>
   </div>
-  <p style="margin-top:16px;font-size:12px;color:rgba(245,240,255,0.35);">This document is a draft pending legal review. It does not constitute legal advice.</p>
-</div><script>
+</div>
+
+<script>
 (function() {
-  var lastScrollY=0,ticking=false;
-  window.addEventListener('scroll',function(){if(!ticking){window.requestAnimationFrame(function(){var nav=document.getElementById('nav');var y=window.scrollY||window.pageYOffset;if(nav)nav.classList.toggle('scrolled',y>60);lastScrollY=y;ticking=false;});ticking=true;}});
+  var lastScrollY = 0, ticking = false;
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        var nav = document.getElementById('nav');
+        var y = window.scrollY || window.pageYOffset;
+        if (nav) nav.classList.toggle('scrolled', y > 60);
+        lastScrollY = y; ticking = false;
+      }); ticking = true;
+    }
+  });
   window.dispatchEvent(new Event('scroll'));
 })();
-function setTosLang(lang){
-  document.getElementById('tos-lang-en').classList.toggle('active',lang==='en');
-  document.getElementById('tos-lang-es').classList.toggle('active',lang==='es');
-  var en=document.getElementById('tos-en'),es=document.getElementById('tos-es');
-  if(en)en.style.display=lang==='en'?'block':'none';
-  if(es)es.style.display=lang==='es'?'block':'none';
-  var heroTag=document.getElementById('tos-hero-tag'),heroH1=document.getElementById('tos-hero-h1');
-  var heroMeta=document.getElementById('tos-hero-meta'),heroDraft=document.getElementById('tos-hero-draft');
-  if(lang==='es'){if(heroTag)heroTag.textContent='Documento Legal';if(heroH1)heroH1.innerHTML='Aviso de Privacidad<br><em>GLBA</em>';if(heroMeta)heroMeta.textContent='Puent3 LLC · Fecha de Vigencia: 2026 · Versión 1.0';if(heroDraft)heroDraft.textContent='⚠ Borrador — Pendiente de Revisión Legal';}
-  else{if(heroTag)heroTag.textContent='Legal Document';if(heroH1)heroH1.innerHTML='GLBA<br><em>Privacy Notice</em>';if(heroMeta)heroMeta.textContent='Puent3 LLC · Effective Date: 2026 · Version 1.0';if(heroDraft)heroDraft.textContent='⚠ Draft — Pending Legal Review';}
+
+function setTosLang(lang) {
+  var enBtn = document.getElementById('tos-lang-en');
+  var esBtn = document.getElementById('tos-lang-es');
+  if (enBtn) enBtn.classList.toggle('active', lang === 'en');
+  if (esBtn) esBtn.classList.toggle('active', lang === 'es');
+  var enBlock = document.getElementById('tos-en');
+  var esBlock = document.getElementById('tos-es');
+  if (enBlock) enBlock.style.display = lang === 'en' ? 'block' : 'none';
+  if (esBlock) esBlock.style.display = lang === 'es' ? 'block' : 'none';
+  var heroTag  = document.getElementById('tos-hero-tag');
+  var heroH1   = document.getElementById('tos-hero-h1');
+  var heroMeta = document.getElementById('tos-hero-meta');
+  if (lang === 'es') {
+    if (heroTag)  heroTag.textContent  = 'Documento Legal';
+    if (heroH1)   heroH1.innerHTML     = 'Aviso de Privacidad<br><em>GLBA</em>';
+    if (heroMeta) heroMeta.textContent = 'Puent3 LLC · Fecha de Vigencia: 3 de abril de 2026 · Versión 1.0';
+  } else {
+    if (heroMeta) heroMeta.textContent = 'Puent3 LLC · Effective Date: April 3, 2026 · Version 1.0';
+  }
+  try { localStorage.setItem('puent3_legal_lang', lang); } catch(e) {}
 }
+(function() {
+  try {
+    var saved = localStorage.getItem('puent3_legal_lang');
+    if (saved) { setTosLang(saved); return; }
+    var browser = (navigator.language || 'en').toLowerCase();
+    setTosLang(browser.startsWith('es') ? 'es' : 'en');
+  } catch(e) { setTosLang('en'); }
+})();
 </script>
 </body>
 </html>
