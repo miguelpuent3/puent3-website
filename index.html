@@ -2014,7 +2014,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="footer-col">
     <h4 data-en="Contact" data-es="Contacto">Contact</h4>
     <ul>
-      <li><a href="mailto:info@puent3.io">info@puent3.io</a></li>
+      <li><a href="/cdn-cgi/l/email-protection#bbd2d5ddd4fbcbceded5cf8895d2d4"><span class="__cf_email__" data-cfemail="6900070f0629191c0c071d5a470006">[email&#160;protected]</span></a></li>
       <li><a href="#contact-form" data-en="Contact Us" data-es="Contáctenos">Contact Us</a></li>
     </ul>
   </div>
@@ -2030,10 +2030,10 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 <div class="footer-bottom">
   <p data-en="© 2026 Puent3 LLC. All rights reserved." data-es="© 2026 Puent3 LLC. Todos los derechos reservados.">© 2026 Puent3 LLC. All rights reserved.</p>
-  <p><a href="mailto:info@puent3.io">info@puent3.io</a></p>
+  <p><a href="/cdn-cgi/l/email-protection#375e59515877474252594304195e58"><span class="__cf_email__" data-cfemail="234a4d454c635356464d57100d4a4c">[email&#160;protected]</span></a></p>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // toggleMenu defined in head
 
 // Mobile nav links — close menu then scroll
@@ -2229,22 +2229,15 @@ function submitForm(e) {
     animId = requestAnimationFrame(draw);
   }
 
-  function init() {
-    particles = [];
-    for (var i = 0; i < 3; i+    for (var i = 0; i < 3; i++) spawnParticle();
-    init();
-    draw();
-  }
+  W = canvas.width = canvas.offsetWidth || 800;
+  H = canvas.height = canvas.offsetHeight || 280;
+  for (var i = 0; i < 3; i++) spawnParticle();
+  draw();
 
   window.addEventListener('resize', function() {
     if (!canvas) return;
-    canvas.width = canvas.offsetWidth;
-    canvas.height = canvas.offsetHeight;
-  });
-
-  document.addEventListener('DOMContentLoaded', function() {
-    var el = document.getElementById('wa-hero-canvas');
-    if (el) initParticles(el);
+    W = canvas.width = canvas.offsetWidth || W || 800;
+    H = canvas.height = canvas.offsetHeight || H || 280;
   });
 })();
 </script>
@@ -2403,15 +2396,4 @@ function submitForm(e) {
   function showTyping(){
     var m=document.getElementById('chat-messages');
     var d=document.createElement('div'); d.className='ctyping'; d.id='ctind';
-    d.innerHTML='<span></span><span></span><span></span>';
-    m.appendChild(d); m.scrollTop=m.scrollHeight; return d;
-  }
-
-  function rmTyping(el){if(el&&el.parentNode)el.parentNode.removeChild(el);}
-
-  setTimeout(function(){if(!open)document.getElementById('chat-unread').style.display='block';},9000);
-})();
-</script>
-<!-- END CHAT WIDGET -->
-</body>
-</html>
+   
