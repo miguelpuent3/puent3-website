@@ -75,7 +75,7 @@
   .glow-section > * { position: relative; z-index: 1; }
 
   /* ── NAV – GLASSMORPHISM ── */
-  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 500; padding: 16px 60px; display: flex; align-items: center; justify-content: space-between; transition: all 0.4s; border-bottom: 1px solid transparent; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 16px 60px; display: flex; align-items: center; justify-content: space-between; transition: all 0.4s; border-bottom: 1px solid transparent; }
   nav.scrolled {
     background: rgba(7,7,20,0.72);
     backdrop-filter: blur(24px) saturate(1.6);
@@ -90,7 +90,7 @@
   .nav-links a { color: var(--white-muted); text-decoration: none; font-size: 13.5px; font-weight: 500; letter-spacing: 0.01em; transition: color 0.2s; }
   .nav-links a:hover { color: var(--white); }
   .lang-toggle { display: flex; gap: 2px; background: rgba(255,149,219,0.07); border: 1px solid var(--border); border-radius: 100px; padding: 3px; }
-  .lang-btn { padding: 5px 13px; border-radius: 100px; border: none; background: transparent; color: var(--white-muted); font-size: 12px; font-weight: 600; letter-spacing: 0.05em; cursor: pointer; font-family: "DM Sans", sans-serif; transition: all 0.2s; }
+  .lang-btn { padding: 5px 13px; border-radius: 100px; border: none; background: transparent; color: var(--white-muted); font-size: 12px; font-weight: 600; letter-spacing: 0.05em; cursor: pointer; font-family: "DM Sans", sans-serif; transition: all 0.2s; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
   .lang-btn.active { background: linear-gradient(135deg, #ff95db 0%, #cc70b0 100%); color: #fff; box-shadow: 0 0 16px rgba(255,149,219,0.4), 0 2px 8px rgba(0,0,0,0.3); }
   .nav-cta {
     display: inline-flex; align-items: center;
@@ -442,7 +442,7 @@
   .footer-bottom a { color: var(--pink); text-decoration: none; }
 
   /* ── HAMBURGER ── */
-  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; position: relative; z-index: 700; }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; position: relative; z-index: 700; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
   .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.3s; }
   .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .hamburger.open span:nth-child(2) { opacity: 0; }
@@ -453,7 +453,7 @@
     background: rgba(7,7,20,0.96);
     backdrop-filter: blur(28px) saturate(1.4);
     -webkit-backdrop-filter: blur(28px) saturate(1.4);
-    z-index: 600;
+    z-index: 950;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     display: flex;
@@ -479,6 +479,8 @@
     font-size: 28px;
     letter-spacing: -0.02em;
     transition: color 0.2s;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
   }
   .mobile-menu a:hover { color: var(--pink-vivid); }
   .mobile-menu .mobile-cta {
@@ -497,12 +499,14 @@
     background: transparent; color: var(--white-dim);
     font-size: 14px; font-weight: 600; letter-spacing: 0.05em;
     cursor: pointer; font-family: "DM Sans", sans-serif;
+    touch-action: manipulation; -webkit-tap-highlight-color: transparent;
   }
   .mobile-menu .mobile-lang button.active { background: linear-gradient(135deg, #ff95db 0%, #cc70b0 100%); color: #fff; }
   .mobile-close {
     position: absolute; top: 24px; right: 24px;
     background: none; border: none; color: var(--white-muted);
     font-size: 32px; cursor: pointer; line-height: 1;
+    touch-action: manipulation; -webkit-tap-highlight-color: transparent;
   }
 
   @media(max-width:960px){
@@ -891,8 +895,14 @@
   .currency-name { font-size: 11px; color: var(--white-muted); font-weight: 400; }
   .cdot { width: 3px; height: 3px; border-radius: 50%; background: rgba(255,149,219,0.25); flex-shrink: 0; }
 
-  .hero-powered-by {
-    position: absolute; bottom: 0; left: 0; right: 0;
+  .currency-coming-soon {
+    font-size: 9px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--pink); background: rgba(255,149,219,0.12);
+    border: 1px solid rgba(255,149,219,0.3); border-radius: 100px;
+    padding: 2px 7px; line-height: 1.4; white-space: nowrap; flex-shrink: 0;
+  }
+
+
     overflow: hidden;
     padding: 24px 0 30px;
     border-top: 1px solid rgba(255,149,219,0.07);
@@ -1095,7 +1105,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="marquee-reverse">
     <div class="currency-item"><span class="currency-flag">🇺🇸</span><span class="currency-code">USD</span><span class="currency-name" data-en="US Dollar" data-es="Dólar Americano">US Dollar</span></div>
     <div class="cdot"></div>
-    <div class="currency-item"><span class="currency-flag">🇨🇴</span><span class="currency-code">COP</span><span class="currency-name" data-en="Colombian Peso" data-es="Peso Colombiano">Colombian Peso</span></div>
+    <div class="currency-item"><span class="currency-flag">🇨🇴</span><span class="currency-code">COP</span><span class="currency-name" data-en="Colombian Peso" data-es="Peso Colombiano">Colombian Peso</span><span class="currency-coming-soon" data-en="Coming Soon" data-es="Próximamente">Coming Soon</span></div>
     <div class="cdot"></div>
     <div class="currency-item"><span class="currency-flag">🇲🇽</span><span class="currency-code">MXN</span><span class="currency-name" data-en="Mexican Peso" data-es="Peso Mexicano">Mexican Peso</span></div>
     <div class="cdot"></div>
@@ -1106,7 +1116,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="currency-item"><span class="currency-flag">🇪🇺</span><span class="currency-code">EUR</span><span class="currency-name" data-en="Euro" data-es="Euro">Euro</span></div>
     <div class="currency-item"><span class="currency-flag">🇺🇸</span><span class="currency-code">USD</span><span class="currency-name" data-en="US Dollar" data-es="Dólar Americano">US Dollar</span></div>
     <div class="cdot"></div>
-    <div class="currency-item"><span class="currency-flag">🇨🇴</span><span class="currency-code">COP</span><span class="currency-name" data-en="Colombian Peso" data-es="Peso Colombiano">Colombian Peso</span></div>
+    <div class="currency-item"><span class="currency-flag">🇨🇴</span><span class="currency-code">COP</span><span class="currency-name" data-en="Colombian Peso" data-es="Peso Colombiano">Colombian Peso</span><span class="currency-coming-soon" data-en="Coming Soon" data-es="Próximamente">Coming Soon</span></div>
     <div class="cdot"></div>
     <div class="currency-item"><span class="currency-flag">🇲🇽</span><span class="currency-code">MXN</span><span class="currency-name" data-en="Mexican Peso" data-es="Peso Mexicano">Mexican Peso</span></div>
     <div class="cdot"></div>
@@ -2014,7 +2024,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="footer-col">
     <h4 data-en="Contact" data-es="Contacto">Contact</h4>
     <ul>
-      <li><a href="/cdn-cgi/l/email-protection#bbd2d5ddd4fbcbceded5cf8895d2d4"><span class="__cf_email__" data-cfemail="6900070f0629191c0c071d5a470006">[email&#160;protected]</span></a></li>
+      <li><a href="mailto:info@puent3.io">info@puent3.io</a></li>
       <li><a href="#contact-form" data-en="Contact Us" data-es="Contáctenos">Contact Us</a></li>
     </ul>
   </div>
@@ -2030,10 +2040,10 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 <div class="footer-bottom">
   <p data-en="© 2026 Puent3 LLC. All rights reserved." data-es="© 2026 Puent3 LLC. Todos los derechos reservados.">© 2026 Puent3 LLC. All rights reserved.</p>
-  <p><a href="/cdn-cgi/l/email-protection#375e59515877474252594304195e58"><span class="__cf_email__" data-cfemail="234a4d454c635356464d57100d4a4c">[email&#160;protected]</span></a></p>
+  <p><a href="mailto:info@puent3.io" style="color:var(--pink);text-decoration:none;">info@puent3.io</a></p>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // toggleMenu defined in head
 
 // Mobile nav links — close menu then scroll
